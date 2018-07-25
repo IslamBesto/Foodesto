@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="fab_size">64dp</dimen>
+
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="margin_xsmall">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_medium_large">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_xlarge">24dp</dimen>
+    <dimen name="margin_xxlarge">32dp</dimen>
+    <dimen name="margin_xxxlarge">64dp</dimen>
+    <dimen name="margin_medium_xxxlarge">72dp</dimen>
+    <dimen name="margin_medium_xxxxlarge">96dp</dimen>
+    <dimen name="margin_xxxxlarge">128dp</dimen>
+    <dimen name="margin_xxxxxlarge">164dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="font_display4">112sp</dimen>
+    <dimen name="font_display3">56sp</dimen>
+    <dimen name="font_display2">45sp</dimen>
+    <dimen name="font_display1">34sp</dimen>
+
+    <dimen name="font_headline">24sp</dimen>
+    <dimen name="font_title">20sp</dimen>
+    <dimen name="font_subhead">16sp</dimen>
+    <dimen name="font_body">14sp</dimen>
+    <dimen name="font_sub_body">12sp</dimen>
+
+    <dimen name="bottom_navigation_height">72dp</dimen>
+    <!--override design_bottom_navigation_active_text_size to disable animation text on click-->
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">12sp</dimen>
+    <!--override design_fab_image_size to change size of icon -->
+    <dimen name="design_fab_image_size" tools:override="true">8dp</dimen>
+</resources>
