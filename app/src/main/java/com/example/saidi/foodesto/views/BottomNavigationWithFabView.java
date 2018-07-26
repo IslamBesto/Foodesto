@@ -28,13 +28,11 @@ import butterknife.OnClick;
 
 public class BottomNavigationWithFabView extends FrameLayout {
 
-    BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
-
     @BindView(R.id.fab_button)
     protected FloatingActionButton mFloatingActionButton;
-
     @BindView(R.id.curve_bottom_navigation_view)
     protected CurvedBottomNavigationView mCurvedBottomNavigationView;
+    BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
 
     public BottomNavigationWithFabView(
             @NonNull Context context) {
@@ -158,7 +156,7 @@ public class BottomNavigationWithFabView extends FrameLayout {
 
     @OnClick(R.id.fab_button)
     public void onFabClicked() {
-        mCurvedBottomNavigationView.setSelectedItemId(R.id.catalogue_nav_menu_item);
+        mCurvedBottomNavigationView.setSelectedItemId(R.id.home_scan_nav_menu_item);
     }
 
     /**

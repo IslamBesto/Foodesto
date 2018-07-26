@@ -24,7 +24,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="-32dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_barcode"
             app:borderWidth="0dp"
             app:elevation="6dp"
             app:fabSize="auto" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="home_nav_menu_item" type="id" />
-    <item name="catalogue_nav_menu_item" type="id" />
-    <item name="project_nav_menu_item" type="id" />
+    <item name="home_statistics_nav_menu_item" type="id" />
+    <item name="home_scan_nav_menu_item" type="id" />
+    <item name="home_purchace_nav_menu_item" type="id" />
 </resources>
