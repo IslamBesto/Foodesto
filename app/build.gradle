@@ -45,6 +45,9 @@ dependencies {
     //Firebase
     implementation 'com.google.firebase:firebase-core:16.0.0'
 
+    // ML Kit barcode
+    implementation 'com.google.firebase:firebase-ml-vision:16.0.0'
+
     // Images management
     implementation 'com.github.bumptech.glide:glide:4.7.1'
 

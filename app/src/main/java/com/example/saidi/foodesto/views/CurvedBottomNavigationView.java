@@ -14,14 +14,17 @@ import android.util.AttributeSet;
 
 import com.example.saidi.foodesto.R;
 
-/** Create a custom Navigation Bar {@link BottomNavigationView} to draw cubic curve on the middle */
+/**
+ * Create a custom Navigation Bar {@link BottomNavigationView} to draw cubic curve on the middle
+ */
 public class CurvedBottomNavigationView extends BottomNavigationView {
 
+    /**
+     * the CURVE_CIRCLE_RADIUS represent the radius of the fab button
+     */
+    private final int CURVE_CIRCLE_RADIUS = (int) getResources().getDimension(R.dimen.fab_size) / 2;
     private Path mPath;
     private Paint mPaint;
-
-    /** the CURVE_CIRCLE_RADIUS represent the radius of the fab button */
-    private final int CURVE_CIRCLE_RADIUS = (int) getResources().getDimension(R.dimen.fab_size) / 2;
     // the coordinates of the first curve
     private Point mFirstCurveStartPoint = new Point();
     private Point mFirstCurveEndPoint = new Point();
@@ -60,22 +63,15 @@ public class CurvedBottomNavigationView extends BottomNavigationView {
         mPaint.setColor(Color.WHITE);
         mPaint.setStrokeWidth(1);
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
-
-        /*long delay = 2000;
-        for (final PorterDuff.Mode mode : PorterDuff.Mode.values()) {
-            postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Toast.makeText(getContext(), "" + mode, Toast.LENGTH_SHORT).show();
-                    mPaint.setXfermode(new PorterDuffXfermode(mode));
-                    invalidate();
-                }
-            }, delay);
-
-            delay += 2000;
-        }*/
     }
 
+    /* we position the path at the began of the navigation bar (0,0) and draw a line to the
+     first point before first curve, then we draw our first curve using method cubicTo
+             (you can check documentation here : {@linktourl https://goo.gl/HRbU89} ).
+         (you can also try to simulate the curve using this online tools
+         {@linktourl https://goo.gl/nHpBas})
+             after we draw the second curve always using cubicTo method
+           finally we draw the rest of the navigation bar as if we draw a rectangle using lineTo*/
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
@@ -123,31 +119,5 @@ public class CurvedBottomNavigationView extends BottomNavigationView {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        /*
-          we position the path at the began of the navigation bar (0,0) and draw a line to the
-          first point before first curve, then we draw our first curve using method cubicTo
-          (you can check documentation here : {@linktourl https://goo.gl/HRbU89} ).
-          (you can also try to simulate the curve using this online tools
-          {@linktourl https://goo.gl/nHpBas})
-          after we draw the second curve always using cubicTo method
-          finally we draw the rest of the navigation bar as if we draw a rectangle using lineTo
-         */
-        /*mPath.reset();
-        mPath.moveTo(0, 0);
-        mPath.lineTo(mFirstCurveStartPoint.x, mFirstCurveStartPoint.y);
-
-        mPath.cubicTo(mFirstCurveControlPoint1.x, mFirstCurveControlPoint1.y,
-                mFirstCurveControlPoint2.x, mFirstCurveControlPoint2.y,
-                mFirstCurveEndPoint.x, mFirstCurveEndPoint.y);
-
-        mPath.cubicTo(mSecondCurveControlPoint1.x, mSecondCurveControlPoint1.y,
-                mSecondCurveControlPoint2.x, mSecondCurveControlPoint2.y,
-                mSecondCurveEndPoint.x, mSecondCurveEndPoint.y);
-
-        mPath.lineTo(mNavigationBarWidth, 0);
-        mPath.lineTo(mNavigationBarWidth, mNavigationBarHeight);
-        mPath.lineTo(0, mNavigationBarHeight);
-        mPath.close();
-        canvas.drawPath(mPath, mPaint);*/
     }
 }
