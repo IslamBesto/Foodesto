@@ -144,7 +144,7 @@ public class BarCodeActivity extends AppCompatActivity {
             mImageHeight = imageHeight;
 
             options = new FirebaseVisionBarcodeDetectorOptions.Builder()
-                    .setBarcodeFormats(FirebaseVisionBarcode.FORMAT_EAN_13)
+                    .setBarcodeFormats(FirebaseVisionBarcode.FORMAT_EAN_8)
                     .build();
 
             detector = FirebaseVision.getInstance().getVisionBarcodeDetector(options);
