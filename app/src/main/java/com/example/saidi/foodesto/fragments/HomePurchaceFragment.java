@@ -58,8 +58,8 @@ public class HomePurchaceFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Toast.makeText(getContext(), mBarCode + "Nutella", Toast.LENGTH_SHORT).show();
-        NetworkManager.INSTANCE.getFoodestoServices().getProductDetails("3068320118208.json").enqueue(new Callback<Foodesto>() {
+        Toast.makeText(getContext(), mBarCode + "", Toast.LENGTH_SHORT).show();
+        NetworkManager.INSTANCE.getFoodestoServices().getProductDetails(mBarCode + ".json").enqueue(new Callback<Foodesto>() {
             @Override
             public void onResponse(@NonNull Call<Foodesto> call, @NonNull Response<Foodesto> response) {
                 mProductTitle.setText(response.body().toString());
