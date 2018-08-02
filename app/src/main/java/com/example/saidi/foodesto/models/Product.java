@@ -563,259 +563,259 @@ public class Product {
 //    private List<Object> packagingDebugTags = null;
 //
 
-//    public String getImageFrontThumbUrl() {
-//        return imageFrontThumbUrl;
-//    }
-//
-//    public void setImageFrontThumbUrl(String imageFrontThumbUrl) {
-//        this.imageFrontThumbUrl = imageFrontThumbUrl;
-//    }
-//
-//    public String getCountries() {
-//        return countries;
-//    }
-//
-//    public void setCountries(String countries) {
-//        this.countries = countries;
-//    }
-//
-//    public String getServingQuantity() {
-//        return servingQuantity;
-//    }
-//
-//    public void setServingQuantity(String servingQuantity) {
-//        this.servingQuantity = servingQuantity;
-//    }
-//
-//    public List<Object> getAllergensHierarchy() {
-//        return allergensHierarchy;
-//    }
-//
-//    public void setAllergensHierarchy(List<Object> allergensHierarchy) {
-//        this.allergensHierarchy = allergensHierarchy;
-//    }
-//
-//    public Nutriments getNutriments() {
-//        return nutriments;
-//    }
-//
-//    public void setNutriments(Nutriments nutriments) {
-//        this.nutriments = nutriments;
-//    }
-//
-//    public String getImageSmallUrl() {
-//        return imageSmallUrl;
-//    }
-//
-//    public void setImageSmallUrl(String imageSmallUrl) {
-//        this.imageSmallUrl = imageSmallUrl;
-//    }
-//
-//    public List<String> getCategoriesHierarchy() {
-//        return categoriesHierarchy;
-//    }
-//
-//    public void setCategoriesHierarchy(List<String> categoriesHierarchy) {
-//        this.categoriesHierarchy = categoriesHierarchy;
-//    }
-//
-//    public String getAdditivesPrevN() {
-//        return additivesPrevN;
-//    }
-//
-//    public void setAdditivesPrevN(String additivesPrevN) {
-//        this.additivesPrevN = additivesPrevN;
-//    }
-//
-//    public String getImageFrontUrl() {
-//        return imageFrontUrl;
-//    }
-//
-//    public void setImageFrontUrl(String imageFrontUrl) {
-//        this.imageFrontUrl = imageFrontUrl;
-//    }
-//
-//    public String getAdditivesN() {
-//        return additivesN;
-//    }
-//
-//    public void setAdditivesN(String additivesN) {
-//        this.additivesN = additivesN;
-//    }
-//
-//    public List<String> getAdditivesOriginalTags() {
-//        return additivesOriginalTags;
-//    }
-//
-//    public void setAdditivesOriginalTags(List<String> additivesOriginalTags) {
-//        this.additivesOriginalTags = additivesOriginalTags;
-//    }
-//
-//    public List<String> getAdditivesPrevTags() {
-//        return additivesPrevTags;
-//    }
-//
-//    public void setAdditivesPrevTags(List<String> additivesPrevTags) {
-//        this.additivesPrevTags = additivesPrevTags;
-//    }
-//
-//    public List<String> getAdditivesTags() {
-//        return additivesTags;
-//    }
-//
-//    public void setAdditivesTags(List<String> additivesTags) {
-//        this.additivesTags = additivesTags;
-//    }
-//
-//    public List<Ingredient> getIngredients() {
-//        return ingredients;
-//    }
-//
-//    public void setIngredients(List<Ingredient> ingredients) {
-//        this.ingredients = ingredients;
-//    }
-//
-//    public String getNutritionDataPer() {
-//        return nutritionDataPer;
-//    }
-//
-//    public void setNutritionDataPer(String nutritionDataPer) {
-//        this.nutritionDataPer = nutritionDataPer;
-//    }
-//
-//    public String getAdditivesPrev() {
-//        return additivesPrev;
-//    }
-//
-//    public void setAdditivesPrev(String additivesPrev) {
-//        this.additivesPrev = additivesPrev;
-//    }
-//
-//    public String getProductNameEn() {
-//        return productNameEn;
-//    }
-//
-//    public void setProductNameEn(String productNameEn) {
-//        this.productNameEn = productNameEn;
-//    }
-//
-//    public String getProductQuantity() {
-//        return productQuantity;
-//    }
-//
-//    public void setProductQuantity(String productQuantity) {
-//        this.productQuantity = productQuantity;
-//    }
-//
-//    public String getImageThumbUrl() {
-//        return imageThumbUrl;
-//    }
-//
-//    public void setImageThumbUrl(String imageThumbUrl) {
-//        this.imageThumbUrl = imageThumbUrl;
-//    }
-//
-//    public String getStores() {
-//        return stores;
-//    }
-//
-//    public void setStores(String stores) {
-//        this.stores = stores;
-//    }
-//
-//    public String getCategories() {
-//        return categories;
-//    }
-//
-//    public void setCategories(String categories) {
-//        this.categories = categories;
-//    }
-//
-//    public String getUnknownIngredientsN() {
-//        return unknownIngredientsN;
-//    }
-//
-//    public void setUnknownIngredientsN(String unknownIngredientsN) {
-//        this.unknownIngredientsN = unknownIngredientsN;
-//    }
-//
-//    public String getQuantity() {
-//        return quantity;
-//    }
-//
-//    public void setQuantity(String quantity) {
-//        this.quantity = quantity;
-//    }
-//
-//    public String getIngredientsText() {
-//        return ingredientsText;
-//    }
-//
-//    public void setIngredientsText(String ingredientsText) {
-//        this.ingredientsText = ingredientsText;
-//    }
-//
-//    public String getBrands() {
-//        return brands;
-//    }
-//
-//    public void setBrands(String brands) {
-//        this.brands = brands;
-//    }
-//
-//    public List<String> getNutrientLevelsTags() {
-//        return nutrientLevelsTags;
-//    }
-//
-//    public void setNutrientLevelsTags(List<String> nutrientLevelsTags) {
-//        this.nutrientLevelsTags = nutrientLevelsTags;
-//    }
-//
-//    public String getIngredientsN() {
-//        return ingredientsN;
-//    }
-//
-//    public void setIngredientsN(String ingredientsN) {
-//        this.ingredientsN = ingredientsN;
-//    }
-//
-//    public String getNutritionGrades() {
-//        return nutritionGrades;
-//    }
-//
-//    public void setNutritionGrades(String nutritionGrades) {
-//        this.nutritionGrades = nutritionGrades;
-//    }
-//
-//    public String getAdditives() {
-//        return additives;
-//    }
-//
-//    public void setAdditives(String additives) {
-//        this.additives = additives;
-//    }
-//
-//    public List<String> getAdditivesOldTags() {
-//        return additivesOldTags;
-//    }
-//
-//    public void setAdditivesOldTags(List<String> additivesOldTags) {
-//        this.additivesOldTags = additivesOldTags;
-//    }
-//
-//    public String getIngredientsFromPalmOilN() {
-//        return ingredientsFromPalmOilN;
-//    }
-//
-//    public void setIngredientsFromPalmOilN(String ingredientsFromPalmOilN) {
-//        this.ingredientsFromPalmOilN = ingredientsFromPalmOilN;
-//    }
-//
-//    public String getProductName() {
-//        return productName;
-//    }
-//
-//    public void setProductName(String productName) {
-//        this.productName = productName;
-//    }
+    public String getImageFrontThumbUrl() {
+        return imageFrontThumbUrl;
+    }
+
+    public void setImageFrontThumbUrl(String imageFrontThumbUrl) {
+        this.imageFrontThumbUrl = imageFrontThumbUrl;
+    }
+
+    public String getCountries() {
+        return countries;
+    }
+
+    public void setCountries(String countries) {
+        this.countries = countries;
+    }
+
+    public String getServingQuantity() {
+        return servingQuantity;
+    }
+
+    public void setServingQuantity(String servingQuantity) {
+        this.servingQuantity = servingQuantity;
+    }
+
+    public List<Object> getAllergensHierarchy() {
+        return allergensHierarchy;
+    }
+
+    public void setAllergensHierarchy(List<Object> allergensHierarchy) {
+        this.allergensHierarchy = allergensHierarchy;
+    }
+
+    public Nutriments getNutriments() {
+        return nutriments;
+    }
+
+    public void setNutriments(Nutriments nutriments) {
+        this.nutriments = nutriments;
+    }
+
+    public String getImageSmallUrl() {
+        return imageSmallUrl;
+    }
+
+    public void setImageSmallUrl(String imageSmallUrl) {
+        this.imageSmallUrl = imageSmallUrl;
+    }
+
+    public List<String> getCategoriesHierarchy() {
+        return categoriesHierarchy;
+    }
+
+    public void setCategoriesHierarchy(List<String> categoriesHierarchy) {
+        this.categoriesHierarchy = categoriesHierarchy;
+    }
+
+    public String getAdditivesPrevN() {
+        return additivesPrevN;
+    }
+
+    public void setAdditivesPrevN(String additivesPrevN) {
+        this.additivesPrevN = additivesPrevN;
+    }
+
+    public String getImageFrontUrl() {
+        return imageFrontUrl;
+    }
+
+    public void setImageFrontUrl(String imageFrontUrl) {
+        this.imageFrontUrl = imageFrontUrl;
+    }
+
+    public String getAdditivesN() {
+        return additivesN;
+    }
+
+    public void setAdditivesN(String additivesN) {
+        this.additivesN = additivesN;
+    }
+
+    public List<String> getAdditivesOriginalTags() {
+        return additivesOriginalTags;
+    }
+
+    public void setAdditivesOriginalTags(List<String> additivesOriginalTags) {
+        this.additivesOriginalTags = additivesOriginalTags;
+    }
+
+    public List<String> getAdditivesPrevTags() {
+        return additivesPrevTags;
+    }
+
+    public void setAdditivesPrevTags(List<String> additivesPrevTags) {
+        this.additivesPrevTags = additivesPrevTags;
+    }
+
+    public List<String> getAdditivesTags() {
+        return additivesTags;
+    }
+
+    public void setAdditivesTags(List<String> additivesTags) {
+        this.additivesTags = additivesTags;
+    }
+
+    public List<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(List<Ingredient> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public String getNutritionDataPer() {
+        return nutritionDataPer;
+    }
+
+    public void setNutritionDataPer(String nutritionDataPer) {
+        this.nutritionDataPer = nutritionDataPer;
+    }
+
+    public String getAdditivesPrev() {
+        return additivesPrev;
+    }
+
+    public void setAdditivesPrev(String additivesPrev) {
+        this.additivesPrev = additivesPrev;
+    }
+
+    public String getProductNameEn() {
+        return productNameEn;
+    }
+
+    public void setProductNameEn(String productNameEn) {
+        this.productNameEn = productNameEn;
+    }
+
+    public String getProductQuantity() {
+        return productQuantity;
+    }
+
+    public void setProductQuantity(String productQuantity) {
+        this.productQuantity = productQuantity;
+    }
+
+    public String getImageThumbUrl() {
+        return imageThumbUrl;
+    }
+
+    public void setImageThumbUrl(String imageThumbUrl) {
+        this.imageThumbUrl = imageThumbUrl;
+    }
+
+    public String getStores() {
+        return stores;
+    }
+
+    public void setStores(String stores) {
+        this.stores = stores;
+    }
+
+    public String getCategories() {
+        return categories;
+    }
+
+    public void setCategories(String categories) {
+        this.categories = categories;
+    }
+
+    public String getUnknownIngredientsN() {
+        return unknownIngredientsN;
+    }
+
+    public void setUnknownIngredientsN(String unknownIngredientsN) {
+        this.unknownIngredientsN = unknownIngredientsN;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getIngredientsText() {
+        return ingredientsText;
+    }
+
+    public void setIngredientsText(String ingredientsText) {
+        this.ingredientsText = ingredientsText;
+    }
+
+    public String getBrands() {
+        return brands;
+    }
+
+    public void setBrands(String brands) {
+        this.brands = brands;
+    }
+
+    public List<String> getNutrientLevelsTags() {
+        return nutrientLevelsTags;
+    }
+
+    public void setNutrientLevelsTags(List<String> nutrientLevelsTags) {
+        this.nutrientLevelsTags = nutrientLevelsTags;
+    }
+
+    public String getIngredientsN() {
+        return ingredientsN;
+    }
+
+    public void setIngredientsN(String ingredientsN) {
+        this.ingredientsN = ingredientsN;
+    }
+
+    public String getNutritionGrades() {
+        return nutritionGrades;
+    }
+
+    public void setNutritionGrades(String nutritionGrades) {
+        this.nutritionGrades = nutritionGrades;
+    }
+
+    public String getAdditives() {
+        return additives;
+    }
+
+    public void setAdditives(String additives) {
+        this.additives = additives;
+    }
+
+    public List<String> getAdditivesOldTags() {
+        return additivesOldTags;
+    }
+
+    public void setAdditivesOldTags(List<String> additivesOldTags) {
+        this.additivesOldTags = additivesOldTags;
+    }
+
+    public String getIngredientsFromPalmOilN() {
+        return ingredientsFromPalmOilN;
+    }
+
+    public void setIngredientsFromPalmOilN(String ingredientsFromPalmOilN) {
+        this.ingredientsFromPalmOilN = ingredientsFromPalmOilN;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 }

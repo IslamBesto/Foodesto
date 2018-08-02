@@ -9,7 +9,7 @@
         android:id="@+id/fragment_container_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:background="@color/athens_gray"
         android:clipChildren="false"
         tools:layout="@layout/fragment_home" />
 

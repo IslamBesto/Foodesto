@@ -3,4 +3,11 @@
     <string name="home_statistics_label">Statistics</string>
     <string name="home_scan_label">Scan</string>
     <string name="home_cart_purchase">Purchase</string>
+    <string name="propertie_fat">Fat</string>
+    <string name="propertie_salt">Salt</string>
+    <string name="propertie_fiber">Fiber</string>
+    <string name="propertie_sugar">Sugar</string>
+    <string name="propertie_energy">Energy</string>
+    <string name="propertie_proteins">Proteins</string>
+    <string name="propertie_carbohydrate">Carbohydrate</string>
 </resources>
