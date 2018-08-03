@@ -83,12 +83,12 @@ public class HomePurchaceFragment extends BaseFragment {
                 if (!quantity.isEmpty()) {
                     //TODO : add helper to calculate value quality of product
                     ProductPropertieView productPropertieView = new ProductPropertieView(getContext());
-                    productPropertieView.bind(NutrimentType.SALT, quantity, NutrimentsUtils.getSaltQualiity(quantity));
+                    productPropertieView.bind(NutrimentType.SALT, quantity, NutrimentsUtils.getSaltQuality(quantity, product.getNutritionDataPer()));
                     mProductPropertiesContainer.addView(productPropertieView);
                 }
                 if (!nutriments.getFat().isEmpty()) {
                     ProductPropertieView productPropertieView = new ProductPropertieView(getContext());
-                    productPropertieView.bind(NutrimentType.FAT, nutriments.getFat(), "Faible");
+                    productPropertieView.bind(NutrimentType.FAT, nutriments.getFat(), NutrimentsUtils.getFatQuality(nutriments.getFat(), product.getNutritionDataPer()));
                     mProductPropertiesContainer.addView(productPropertieView);
                 }
 
