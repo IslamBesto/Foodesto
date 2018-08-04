@@ -11,18 +11,15 @@ import com.example.saidi.foodesto.BaseFragment;
 import com.example.saidi.foodesto.R;
 import com.example.saidi.foodesto.interfaces.IHomeFragment;
 
-/**
- * Created by saidi on 26/07/2018.
- */
 
-public class HomeStatisticsFragment extends BaseFragment implements IHomeFragment {
+public class HomePurchacesFragment extends BaseFragment implements IHomeFragment {
     public static BaseFragment newInstance() {
-        return new HomeStatisticsFragment();
+        return new HomePurchacesFragment();
     }
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_home_statistics;
+        return R.layout.fragment_home_purchaces;
     }
 
     @Nullable

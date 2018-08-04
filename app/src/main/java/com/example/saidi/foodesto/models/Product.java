@@ -1,12 +1,15 @@
 
 package com.example.saidi.foodesto.models;
 
+import android.support.annotation.Nullable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Product {
+public class Product implements Serializable {
     @SerializedName("image_front_thumb_url")
     @Expose
     private String imageFrontThumbUrl;
@@ -80,7 +83,7 @@ public class Product {
 //    @Expose
 //    private List<String> additivesPrevOriginalTags = null;
     @SerializedName("nutriments")
-    @Expose
+    @Nullable
     private Nutriments nutriments;
     //    @SerializedName("code")
 //    @Expose
@@ -100,10 +103,10 @@ public class Product {
 //    @SerializedName("ingredients_from_or_that_may_be_from_palm_oil_n")
 //    @Expose
 //    private String ingredientsFromOrThatMayBeFromPalmOilN;
-//    @SerializedName("_keywords")
-//    @Expose
-//    private List<String> keywords = null;
-//    @SerializedName("image_nutrition_thumb_url")
+    @SerializedName("_keywords")
+    @Expose
+    private List<String> keywords = null;
+    //    @SerializedName("image_nutrition_thumb_url")
 //    @Expose
 //    private String imageNutritionThumbUrl;
 //    @SerializedName("max_imgid")
@@ -585,6 +588,15 @@ public class Product {
 
     public void setServingQuantity(String servingQuantity) {
         this.servingQuantity = servingQuantity;
+    }
+
+    // TODO : delete comments
+    public List<String> getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(List<String> keywords) {
+        this.keywords = keywords;
     }
 
     public List<Object> getAllergensHierarchy() {

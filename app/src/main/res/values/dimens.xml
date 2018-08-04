@@ -33,4 +33,6 @@
     <dimen name="design_bottom_navigation_active_text_size" tools:override="true">12sp</dimen>
     <!--override design_fab_image_size to change size of icon -->
     <dimen name="design_fab_image_size" tools:override="true">8dp</dimen>
+    <dimen name="elevation">6dp</dimen>
+    <dimen name="card_corner_radius">4dp</dimen>
 </resources>

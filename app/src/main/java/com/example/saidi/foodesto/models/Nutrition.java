@@ -4,7 +4,9 @@ package com.example.saidi.foodesto.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Nutrition {
+import java.io.Serializable;
+
+public class Nutrition implements Serializable {
 
     @SerializedName("small")
     @Expose

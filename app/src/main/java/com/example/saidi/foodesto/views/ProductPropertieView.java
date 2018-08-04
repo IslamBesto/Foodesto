@@ -9,6 +9,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,6 +18,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.saidi.foodesto.R;
 import com.example.saidi.foodesto.models.NutrimentType;
+import com.example.saidi.foodesto.models.SeverityType;
+import com.example.saidi.foodesto.utils.StringUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,6 +34,8 @@ public class ProductPropertieView extends FrameLayout {
     protected TextView mPropertieValue;
     @BindView(R.id.propertie_quantity)
     protected TextView mPropertieQuantity;
+    @BindView(R.id.propertie_severity)
+    protected View mPropertieSeverity;
 
     public ProductPropertieView(@NonNull Context context) {
         super(context);
@@ -62,9 +67,23 @@ public class ProductPropertieView extends FrameLayout {
         return R.layout.view_product_propertie;
     }
 
-    public void bind(@NonNull final NutrimentType nutrimentType, @NonNull final String quantity, @NonNull final String value) {
-        mPropertieQuantity.setText(quantity);
-        mPropertieValue.setText(value);
+    public void bind(@NonNull final NutrimentType nutrimentType, @Nullable final String quantity, @Nullable final String value, @NonNull SeverityType severityType) {
+        if (!StringUtils.isNullOrEmpty(quantity)) {
+            mPropertieQuantity.setText(quantity);
+        } else {
+            mPropertieQuantity.setVisibility(GONE);
+        }
+
+        if (!StringUtils.isNullOrEmpty(value)) {
+            mPropertieValue.setText(value);
+        } else {
+            mPropertieValue.setVisibility(GONE);
+        }
+        setNutrimentTitleAndDrawable(nutrimentType);
+        setSeverity(severityType);
+    }
+
+    private void setNutrimentTitleAndDrawable(@NonNull NutrimentType nutrimentType) {
         switch (nutrimentType) {
             case FAT:
                 mPropertieTitle.setText(R.string.propertie_fat);
@@ -94,7 +113,30 @@ public class ProductPropertieView extends FrameLayout {
                 mPropertieTitle.setText(R.string.propertie_carbohydrate);
                 setDrawable(R.drawable.ic_carbohydrate);
                 break;
+            case BIO:
+                mPropertieTitle.setText(R.string.bio);
+                setDrawable(R.drawable.ic_bio);
+            case ADDITIVE:
+                mPropertieTitle.setText(R.string.additives);
+                setDrawable(R.drawable.ic_additive);
             default:
+                break;
+        }
+    }
+
+    private void setSeverity(@NonNull SeverityType severityType) {
+        switch (severityType) {
+            case BAD:
+                mPropertieSeverity.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.ic_red_circle));
+                break;
+            case GOOD:
+                mPropertieSeverity.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.ic_strong_green_circle));
+                break;
+            case MEDIOCR:
+                mPropertieSeverity.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.ic_orange_circle));
+                break;
+            case LOW_IMPACT:
+                mPropertieSeverity.setBackground(ContextCompat.getDrawable(getContext(), R.drawable.ic_accent_green_circle));
                 break;
         }
     }

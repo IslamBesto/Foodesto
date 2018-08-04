@@ -12,9 +12,10 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.example.saidi.foodesto.R;
+import com.example.saidi.foodesto.models.Foodesto;
+import com.example.saidi.foodesto.network.NetworkManager;
 import com.example.saidi.foodesto.views.CameraView;
 import com.example.saidi.foodesto.views.CodeBarDetectorView;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -30,10 +31,14 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class BarCodeActivity extends AppCompatActivity {
 
     public static final String KEY_BAR_CODE = "bar_code";
+    private static final String KEY_PRODUCT = "product";
     @BindView(R.id.container)
     protected FrameLayout mContainer;
     private CameraView camView;
@@ -180,11 +185,25 @@ public class BarCodeActivity extends AppCompatActivity {
                 int valueType = barcode.getValueType();
                 if (valueType == FirebaseVisionBarcode.TYPE_PRODUCT) {
                     mBarcodeDetectedListener.onIsbnDetected(barcode);
-                    Toast.makeText(BarCodeActivity.this, barcodes.get(0).getRawValue(), Toast.LENGTH_SHORT).show();
-                    Intent BackIntent = new Intent();
-                    BackIntent.putExtra(KEY_BAR_CODE, barcodes.get(0).getRawValue());
-                    setResult(RESULT_OK, BackIntent);
-                    finish();
+                    NetworkManager.INSTANCE.getFoodestoServices().getProductDetails(barcodes.get(0).getRawValue() + ".json").enqueue(new Callback<Foodesto>() {
+                        @Override
+                        public void onResponse(@NonNull Call<Foodesto> call, @NonNull Response<Foodesto> response) {
+                            Intent BackIntent = new Intent();
+                            // BackIntent.putExtra(KEY_BAR_CODE, barcodes.get(0).getRawValue());
+                            BackIntent.putExtra(KEY_PRODUCT, response.body().getProduct());
+                            setResult(RESULT_OK, BackIntent);
+                            finish();
+                        }
+
+                        @Override
+                        public void onFailure(@NonNull Call<Foodesto> call, @NonNull Throwable t) {
+
+                        }
+                    });
+//                    Intent BackIntent = new Intent();
+//                    BackIntent.putExtra(KEY_BAR_CODE, barcodes.get(0).getRawValue());
+//                    setResult(RESULT_OK, BackIntent);
+//                    finish();
                     return;
                 }
             }

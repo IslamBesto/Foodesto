@@ -8,5 +8,7 @@ public enum NutrimentType {
     FIBER,
     FAT,
     SALT,
-    CARBOHYDRATE
+    CARBOHYDRATE,
+    BIO,
+    ADDITIVE
 }

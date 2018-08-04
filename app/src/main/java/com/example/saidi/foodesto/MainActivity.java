@@ -8,28 +8,30 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.saidi.foodesto.activities.BarCodeActivity;
 import com.example.saidi.foodesto.common.activities.BaseActivity;
-import com.example.saidi.foodesto.fragments.HomePurchaceFragment;
+import com.example.saidi.foodesto.fragments.HomePurchacesFragment;
 import com.example.saidi.foodesto.fragments.HomeStatisticsFragment;
-import com.example.saidi.foodesto.models.Foodesto;
-import com.example.saidi.foodesto.network.NetworkManager;
+import com.example.saidi.foodesto.fragments.ProductDetailsFragment;
+import com.example.saidi.foodesto.interfaces.IHomeFragment;
+import com.example.saidi.foodesto.models.Product;
 import com.example.saidi.foodesto.views.BottomNavigationWithFabView;
 import com.example.saidi.foodesto.views.CurvedBottomNavigationView;
 
+import java.util.List;
+
 import butterknife.BindView;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements IHomeFragment {
 
 
-    public static final String KEY_BAR_CODE = "bar_code";
+    public static final String KEY_PRODUCT = "product";
     private static final String TAG = MainActivity.class.getName();
     private static final int DEFAULT_HOME_ITEM = R.id.home_statistics_nav_menu_item;
     @BindView(R.id.bottom_navigation_bar_fab)
@@ -66,27 +68,13 @@ public class MainActivity extends BaseActivity {
                         if (isPermissionGranted()) startBarCodeActivity();
                         return true;
                     case R.id.home_purchace_nav_menu_item:
-                        pushFragment(HomePurchaceFragment.newInstance(null));
+                        pushFragment(HomePurchacesFragment.newInstance());
                         return true;
                 }
                 return false;
             }
         });
         curvedBottomNavigationView.setSelectedItemId(DEFAULT_HOME_ITEM);
-        NetworkManager.INSTANCE.getFoodestoServices().getProductDetails("737628064502.json").enqueue(new Callback<Foodesto>() {
-            @Override
-            public void onResponse(@NonNull Call<Foodesto> call, @NonNull Response<Foodesto> response) {
-                Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
-                // mJson.setText(response.body().getCode());
-
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<Foodesto> call, @NonNull Throwable t) {
-                Toast.makeText(MainActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-            }
-        });
-
     }
 
     /**
@@ -114,10 +102,43 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    public void onBackPressed() {
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        final int backStackEntryCount = fragmentManager.getBackStackEntryCount();
+        if (backStackEntryCount == 1) {
+            CurvedBottomNavigationView curvedBottomNavigationView = mBottomNavigationViewWithFab.getCurvedBottomNavigationView();
+            if (curvedBottomNavigationView.getSelectedItemId() == DEFAULT_HOME_ITEM) {
+                finish();
+                return;
+            }
+            final List<Fragment> fragments = fragmentManager.getFragments();
+            if (fragments.get(backStackEntryCount - 1) instanceof IHomeFragment) {
+                curvedBottomNavigationView.setSelectedItemId(DEFAULT_HOME_ITEM);
+                return;
+            }
+        }
+        super.onBackPressed();
+    }
+
+    @Override
+    public boolean onNavigateUp() {
+        // Pops Fragments in an Android way: Home is not BACK
+        final FragmentManager supportFragmentManager = getSupportFragmentManager();
+        if (supportFragmentManager.getBackStackEntryCount() > 1) {
+            for (int i = 0; i < supportFragmentManager.getBackStackEntryCount() - 1; ++i) {
+                supportFragmentManager.popBackStack();
+            }
+            return true;
+        }
+        return false;
+        // Otherwise: return super.onNavigateUp();
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
-            pushFragment(HomePurchaceFragment.newInstance(data.getStringExtra(KEY_BAR_CODE)));
+            pushFragment(ProductDetailsFragment.newInstance((Product) data.getSerializableExtra(KEY_PRODUCT)));
             mBottomNavigationViewWithFab.getCurvedBottomNavigationView().getMenu().findItem(R.id.home_purchace_nav_menu_item).setChecked(true);
         }
     }

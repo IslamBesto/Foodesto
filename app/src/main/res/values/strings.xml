@@ -10,4 +10,9 @@
     <string name="propertie_energy">Energy</string>
     <string name="propertie_proteins">Proteins</string>
     <string name="propertie_carbohydrate">Carbohydrate</string>
+    <string name="product_properties">Product properties</string>
+    <string name="propertie_unit">100ml/100g</string>
+    <string name="product_additives_label">Product additives</string>
+    <string name="bio">BIO Product</string>
+    <string name="additives">This product contain additives</string>
 </resources>

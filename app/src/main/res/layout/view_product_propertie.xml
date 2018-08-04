@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/propertie_icon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintDimensionRatio="1:1"
@@ -19,13 +19,27 @@
         app:srcCompat="@drawable/ic_launcher_background"
         tools:ignore="VectorDrawableCompat" />
 
+    <View
+        android:id="@+id/propertie_severity"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_orange_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/propertie_quantity"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/propertie_quantity" />
+
     <TextView
         android:id="@+id/propertie_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/margin_medium"
         android:text="TextView"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="@dimen/font_subhead"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/propertie_quantity"
         app:layout_constraintStart_toEndOf="@+id/propertie_icon"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +49,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="@dimen/font_subhead"
         app:layout_constraintStart_toStartOf="@+id/propertie_title"
         app:layout_constraintTop_toBottomOf="@+id/propertie_title" />
 
@@ -46,7 +62,7 @@
         android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/propertie_icon"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/propertie_severity"
         app:layout_constraintTop_toTopOf="@+id/propertie_icon" />
 
     <ImageView
@@ -54,10 +70,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/propertie_quantity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/propertie_quantity"
+        app:layout_constraintTop_toTopOf="@+id/propertie_severity"
         app:srcCompat="@drawable/ic_chevron"
         tools:ignore="VectorDrawableCompat" />
 </android.support.constraint.ConstraintLayout>
