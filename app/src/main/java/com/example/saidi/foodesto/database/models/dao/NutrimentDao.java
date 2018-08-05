@@ -19,4 +19,8 @@ public interface NutrimentDao {
     @Nullable
     @Query("SELECT * FROM Nutriment WHERE Id NOT NULL")
     List<DBNutriment> getNutriment();
+
+    @Nullable
+    @Query("SELECT Id FROM Nutriment ORDER BY ID DESC LIMIT 1")
+    Long getLastNutrimentAdded();
 }

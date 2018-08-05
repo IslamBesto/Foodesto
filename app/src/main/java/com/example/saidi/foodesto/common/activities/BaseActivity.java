@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.saidi.foodesto.BaseFragment;
+import com.example.saidi.foodesto.database.models.DatabaseFacade;
 
 import butterknife.ButterKnife;
 
@@ -24,6 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
+        DatabaseFacade.INSTANCE.init(getApplicationContext());
     }
 
     @Override

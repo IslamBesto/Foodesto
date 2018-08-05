@@ -246,9 +246,9 @@ public class Product implements Serializable {
     //    @SerializedName("stores_debug_tags")
 //    @Expose
 //    private List<Object> storesDebugTags = null;
-//    @SerializedName("ingredients_that_may_be_from_palm_oil_n")
-//    @Expose
-//    private String ingredientsThatMayBeFromPalmOilN;
+    @SerializedName("ingredients_that_may_be_from_palm_oil_n")
+    @Expose
+    private String ingredientsThatMayBeFromPalmOilN;
 //    @SerializedName("ingredients_text_with_allergens_en")
 //    @Expose
 //    private String ingredientsTextWithAllergensEn;
@@ -817,6 +817,14 @@ public class Product implements Serializable {
 
     public void setIngredientsFromPalmOilN(String ingredientsFromPalmOilN) {
         this.ingredientsFromPalmOilN = ingredientsFromPalmOilN;
+    }
+
+    public String getIngredientsThatMayBeFromPalmOilN() {
+        return ingredientsThatMayBeFromPalmOilN;
+    }
+
+    public void setIngredientsThatMayBeFromPalmOilN(String ingredientsThatMayBeFromPalmOilN) {
+        this.ingredientsThatMayBeFromPalmOilN = ingredientsThatMayBeFromPalmOilN;
     }
 
     public String getProductName() {

@@ -1,4 +1,4 @@
-package com.example.saidi.foodesto.database.models;
+package com.example.saidi.foodesto.database.models.models;
 
 
 import android.arch.persistence.room.ColumnInfo;
@@ -8,15 +8,11 @@ import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-import com.example.saidi.foodesto.database.models.models.DBNutriment;
-
-import java.util.List;
-
 import static android.arch.persistence.room.ForeignKey.CASCADE;
 
 @Entity(tableName = "Product",
         foreignKeys = @ForeignKey(entity = DBNutriment.class, parentColumns = "Id", childColumns = "NutrimentId", onDelete = CASCADE),
-        indices = {@Index("ProjectId")})
+        indices = {@Index("NutrimentId")})
 
 public class DBProduct {
 
@@ -32,8 +28,8 @@ public class DBProduct {
     private String countries;
     @ColumnInfo(name = "ServingQuantity")
     private String servingQuantity;
-    @ColumnInfo(name = "Keywords")
-    private List<String> keywords = null;
+    @ColumnInfo(name = "isBio")
+    private boolean isBio;
     @ColumnInfo(name = "ImageSmalUrl")
     private String imageSmallUrl;
     @ColumnInfo(name = "ImageFrontUrl")
@@ -58,6 +54,8 @@ public class DBProduct {
     private String additives;
     @ColumnInfo(name = "ProductName")
     private String productName;
+    @ColumnInfo(name = "PalmOil")
+    private String ingredientsThatMayBeFromPalmOilN;
 
     @NonNull
     public Long getId() {
@@ -92,12 +90,20 @@ public class DBProduct {
         this.servingQuantity = servingQuantity;
     }
 
-    public List<String> getKeywords() {
-        return keywords;
+    public Long getNutrimentID() {
+        return nutrimentID;
     }
 
-    public void setKeywords(List<String> keywords) {
-        this.keywords = keywords;
+    public void setNutrimentID(Long nutrimentID) {
+        this.nutrimentID = nutrimentID;
+    }
+
+    public boolean isBio() {
+        return isBio;
+    }
+
+    public void setBio(boolean bio) {
+        isBio = bio;
     }
 
     public String getImageSmallUrl() {
@@ -194,5 +200,13 @@ public class DBProduct {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public String getIngredientsThatMayBeFromPalmOilN() {
+        return ingredientsThatMayBeFromPalmOilN;
+    }
+
+    public void setIngredientsThatMayBeFromPalmOilN(String ingredientsThatMayBeFromPalmOilN) {
+        this.ingredientsThatMayBeFromPalmOilN = ingredientsThatMayBeFromPalmOilN;
     }
 }

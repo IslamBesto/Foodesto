@@ -13,6 +13,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.saidi.foodesto.BaseFragment;
 import com.example.saidi.foodesto.R;
+import com.example.saidi.foodesto.database.models.DatabaseFacade;
+import com.example.saidi.foodesto.database.models.FoodestoDatabase;
+import com.example.saidi.foodesto.database.models.models.DBNutriment;
+import com.example.saidi.foodesto.database.models.models.DBProduct;
 import com.example.saidi.foodesto.models.NutrimentQuality;
 import com.example.saidi.foodesto.models.NutrimentType;
 import com.example.saidi.foodesto.models.Nutriments;
@@ -23,6 +27,7 @@ import com.example.saidi.foodesto.utils.StringUtils;
 import com.example.saidi.foodesto.views.ProductPropertieView;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class ProductDetailsFragment extends BaseFragment {
 
@@ -42,6 +47,7 @@ public class ProductDetailsFragment extends BaseFragment {
 
     private Context mContext;
     private String nutritionDataPer;
+    private FoodestoDatabase mFoodestoDatabase;
 
     public ProductDetailsFragment() {
     }
@@ -67,6 +73,7 @@ public class ProductDetailsFragment extends BaseFragment {
         if (bundle != null) {
             mProduct = (Product) bundle.getSerializable(EXTRA_PODUCT);
         }
+        mFoodestoDatabase = FoodestoDatabase.getFoodestoInstance(getContext().getApplicationContext());
     }
 
     @Override
@@ -142,6 +149,49 @@ public class ProductDetailsFragment extends BaseFragment {
         NutrimentQuality propertieQuality = NutrimentsUtils.getPropertieQuality(propertie, nutritionDataPer, nutrimentType);
         productPropertieView.bind(nutrimentType, propertie, propertieQuality.getmQualityTitle(), propertieQuality.getSeverityType());
         mProductPropertiesContainer.addView(productPropertieView);
+    }
+
+    @OnClick(R.id.button)
+    protected void onAddClick() {
+        DBNutriment dbNutriment = new DBNutriment();
+        Nutriments nutriments = mProduct.getNutriments();
+        dbNutriment.setCarbohydrates(nutriments.getCarbohydrates());
+        dbNutriment.setEnergyValue(nutriments.getEnergyValue());
+        dbNutriment.setFat(nutriments.getFat());
+        dbNutriment.setFiber(nutriments.getFiber());
+        dbNutriment.setSalt(nutriments.getSalt());
+        dbNutriment.setProteins(nutriments.getProteins());
+        dbNutriment.setSugars(nutriments.getSugars());
+        DatabaseFacade.INSTANCE.insertNutriment(dbNutriment, new DatabaseFacade.DatabaseCallback<Long>() {
+            @Override
+            public void databaseCallback(@Nullable Long result) {
+                DBProduct dbProduct = new DBProduct();
+                dbProduct.setAdditives(mProduct.getAdditives());
+                dbProduct.setAdditivesN(mProduct.getAdditivesN());
+                dbProduct.setNutrimentID(result);
+                dbProduct.setBrands(mProduct.getBrands());
+                dbProduct.setCountries(mProduct.getCountries());
+                dbProduct.setImageFrontThumbUrl(mProduct.getImageFrontThumbUrl());
+                dbProduct.setImageFrontUrl(mProduct.getImageFrontUrl());
+                dbProduct.setImageSmallUrl(mProduct.getImageSmallUrl());
+                dbProduct.setImageThumbUrl(mProduct.getImageThumbUrl());
+                dbProduct.setIngredientsThatMayBeFromPalmOilN(mProduct.getIngredientsThatMayBeFromPalmOilN());
+                dbProduct.setProductName(mProduct.getProductName());
+                dbProduct.setProductNameEn(mProduct.getProductNameEn());
+                dbProduct.setProductQuantity(mProduct.getProductQuantity());
+                dbProduct.setServingQuantity(mProduct.getServingQuantity());
+                dbProduct.setNutritionDataPer(mProduct.getNutritionDataPer());
+                dbProduct.setNutritionGrades(mProduct.getNutritionGrades());
+                dbProduct.setStores(mProduct.getStores());
+                DatabaseFacade.INSTANCE.insertProduct(dbProduct, new DatabaseFacade.DatabaseCallback<Long>() {
+                    @Override
+                    public void databaseCallback(@Nullable Long result) {
+                    }
+                });
+            }
+        });
+
+
     }
 
 
