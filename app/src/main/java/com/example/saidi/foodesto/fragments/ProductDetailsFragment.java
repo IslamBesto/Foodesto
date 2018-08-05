@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -151,7 +152,7 @@ public class ProductDetailsFragment extends BaseFragment {
         mProductPropertiesContainer.addView(productPropertieView);
     }
 
-    @OnClick(R.id.button)
+    @OnClick(R.id.add_button)
     protected void onAddClick() {
         DBNutriment dbNutriment = new DBNutriment();
         Nutriments nutriments = mProduct.getNutriments();
@@ -166,6 +167,7 @@ public class ProductDetailsFragment extends BaseFragment {
             @Override
             public void databaseCallback(@Nullable Long result) {
                 DBProduct dbProduct = new DBProduct();
+                dbProduct.setId(Long.parseLong(mProduct.getCode()));
                 dbProduct.setAdditives(mProduct.getAdditives());
                 dbProduct.setAdditivesN(mProduct.getAdditivesN());
                 dbProduct.setNutrimentID(result);
@@ -186,6 +188,8 @@ public class ProductDetailsFragment extends BaseFragment {
                 DatabaseFacade.INSTANCE.insertProduct(dbProduct, new DatabaseFacade.DatabaseCallback<Long>() {
                     @Override
                     public void databaseCallback(@Nullable Long result) {
+                        Snackbar snackbar = Snackbar.make(mProductPropertiesContainer, "Product is added", Snackbar.LENGTH_LONG);
+                        snackbar.show();
                     }
                 });
             }

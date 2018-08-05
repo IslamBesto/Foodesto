@@ -81,9 +81,9 @@ public class Product implements Serializable {
     @SerializedName("nutriments")
     @Nullable
     private Nutriments nutriments;
-    //    @SerializedName("code")
-//    @Expose
-//    private String code;
+    @SerializedName("code")
+    @Expose
+    private String code;
 //    @SerializedName("image_ingredients_url")
 //    @Expose
 //    private String imageIngredientsUrl;
@@ -833,5 +833,13 @@ public class Product implements Serializable {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }

@@ -15,4 +15,5 @@
     <string name="product_additives_label">Product additives</string>
     <string name="bio">BIO Product</string>
     <string name="additives">This product contain additives</string>
+    <string name="add_product">Add</string>
 </resources>
