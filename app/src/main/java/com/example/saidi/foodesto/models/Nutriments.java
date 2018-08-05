@@ -9,34 +9,24 @@ import java.io.Serializable;
 public class Nutriments implements Serializable {
 
     @SerializedName("sugars")
-    @Expose
     private String sugars;
     @SerializedName("fiber_100g")
-    @Expose
     private String fiber100g;
     @SerializedName("proteins_serving")
-    @Expose
     private String proteinsServing;
     @SerializedName("nutrition-score-uk")
-    @Expose
     private Integer nutritionScoreUk;
     @SerializedName("salt_serving")
-    @Expose
     private String saltServing;
     @SerializedName("fat_unit")
-    @Expose
     private String fatUnit;
     @SerializedName("sodium")
-    @Expose
     private String sodium;
     @SerializedName("fat_100g")
-    @Expose
     private String fat100g;
     @SerializedName("nutrition-score-uk_100g")
-    @Expose
     private Integer nutritionScoreUk100g;
     @SerializedName("salt")
-    @Expose
     private String salt;
     @SerializedName("saturated-fat_unit")
     @Expose

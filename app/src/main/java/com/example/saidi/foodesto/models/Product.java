@@ -11,13 +11,11 @@ import java.util.List;
 
 public class Product implements Serializable {
     @SerializedName("image_front_thumb_url")
-    @Expose
     private String imageFrontThumbUrl;
     //    @SerializedName("informers_tags")
 //    @Expose
 //    private List<String> informersTags = null;
     @SerializedName("countries")
-    @Expose
     private String countries;
     //    @SerializedName("photographers")
 //    @Expose
@@ -56,7 +54,6 @@ public class Product implements Serializable {
 //    @Expose
 //    private String nutritionScoreWarningNoFruitsVegetablesNuts;
     @SerializedName("serving_quantity")
-    @Expose
     private String servingQuantity;
     //    @SerializedName("interface_version_modified")
 //    @Expose
@@ -71,7 +68,6 @@ public class Product implements Serializable {
 //    @Expose
 //    private String imageFrontSmallUrl;
     @SerializedName("allergens_hierarchy")
-    @Expose
     private List<Object> allergensHierarchy = null;
     //    @SerializedName("new_additives_n")
 //    @Expose
