@@ -3,13 +3,14 @@ package com.example.saidi.foodesto.models;
 
 import android.support.annotation.Nullable;
 
+import com.example.saidi.foodesto.interfaces.IProduct;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class Product implements Serializable {
+public class Product implements Serializable, IProduct {
     @SerializedName("image_front_thumb_url")
     private String imageFrontThumbUrl;
     //    @SerializedName("informers_tags")

@@ -189,10 +189,13 @@ public class BarCodeActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(@NonNull Call<Foodesto> call, @NonNull Response<Foodesto> response) {
                             Intent BackIntent = new Intent();
-                            // BackIntent.putExtra(KEY_BAR_CODE, barcodes.get(0).getRawValue());
-                            BackIntent.putExtra(KEY_PRODUCT, response.body().getProduct());
-                            setResult(RESULT_OK, BackIntent);
-                            finish();
+                            Foodesto body = response.body();
+                            if (body != null) {
+                                BackIntent.putExtra(KEY_PRODUCT, body.getProduct());
+                                setResult(RESULT_OK, BackIntent);
+                                finish();
+                            }
+
                         }
 
                         @Override
@@ -200,10 +203,6 @@ public class BarCodeActivity extends AppCompatActivity {
 
                         }
                     });
-//                    Intent BackIntent = new Intent();
-//                    BackIntent.putExtra(KEY_BAR_CODE, barcodes.get(0).getRawValue());
-//                    setResult(RESULT_OK, BackIntent);
-//                    finish();
                     return;
                 }
             }

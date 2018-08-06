@@ -18,6 +18,7 @@ import com.example.saidi.foodesto.database.models.DatabaseFacade;
 import com.example.saidi.foodesto.database.models.FoodestoDatabase;
 import com.example.saidi.foodesto.database.models.models.DBNutriment;
 import com.example.saidi.foodesto.database.models.models.DBProduct;
+import com.example.saidi.foodesto.interfaces.IProduct;
 import com.example.saidi.foodesto.models.NutrimentQuality;
 import com.example.saidi.foodesto.models.NutrimentType;
 import com.example.saidi.foodesto.models.Nutriments;
@@ -33,6 +34,7 @@ import butterknife.OnClick;
 public class ProductDetailsFragment extends BaseFragment {
 
     public static final String EXTRA_PODUCT = "bar_code_number";
+    private static boolean isFromDB = false;
 
     @BindView(R.id.product_image_view)
     protected ImageView mProductImage;
@@ -44,7 +46,9 @@ public class ProductDetailsFragment extends BaseFragment {
     protected LinearLayout mProductPropertiesContainer;
     @BindView(R.id.product_additives_container)
     protected LinearLayout mProductAdditivesContainer;
+    private IProduct mIProduct;
     private Product mProduct;
+    private DBProduct mDbProduct;
 
     private Context mContext;
     private String nutritionDataPer;
@@ -53,8 +57,13 @@ public class ProductDetailsFragment extends BaseFragment {
     public ProductDetailsFragment() {
     }
 
-    public static BaseFragment newInstance(@Nullable final Product product) {
+    public static BaseFragment newInstance(@Nullable final IProduct product) {
         ProductDetailsFragment productDetailsFragment = new ProductDetailsFragment();
+        if (product instanceof DBProduct) {
+            isFromDB = true;
+        } else {
+            isFromDB = false;
+        }
         final Bundle bundle = new Bundle();
         bundle.putSerializable(EXTRA_PODUCT, product);
         productDetailsFragment.setArguments(bundle);
@@ -72,76 +81,150 @@ public class ProductDetailsFragment extends BaseFragment {
         mContext = getContext();
         Bundle bundle = getArguments();
         if (bundle != null) {
-            mProduct = (Product) bundle.getSerializable(EXTRA_PODUCT);
+            mIProduct = (IProduct) bundle.getSerializable(EXTRA_PODUCT);
         }
         mFoodestoDatabase = FoodestoDatabase.getFoodestoInstance(getContext().getApplicationContext());
     }
 
+    // FIXME : optimize this shit :D
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if (isFromDB) {
+            mDbProduct = (DBProduct) mIProduct;
+            if (mDbProduct != null) {
+                mProductTitle.setText(mDbProduct.getProductName());
+                mProductSubtitle.setText(mDbProduct.getBrands());
+                Glide.with(mProductImage.getContext())
+                        .load(mDbProduct.getImageThumbUrl())
+                        .apply(new RequestOptions().placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_background))
+                        .into(mProductImage);
+                DatabaseFacade.INSTANCE.getNutrimentsById(mDbProduct.getNutrimentID(), new DatabaseFacade.DatabaseCallback<DBNutriment>() {
+                    @Override
+                    public void databaseCallback(@Nullable DBNutriment nutriment) {
+                        if (nutriment != null) {
+                            String salt = nutriment.getSalt();
+                            nutritionDataPer = mDbProduct.getNutritionDataPer();
 
-        if (mProduct != null) {
-            mProductTitle.setText(mProduct.getProductName());
-            mProductSubtitle.setText(mProduct.getBrands());
-            Glide.with(mProductImage.getContext())
-                    .load(mProduct.getImageThumbUrl())
-                    .apply(new RequestOptions().placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_background))
-                    .into(mProductImage);
-            Nutriments nutriments = mProduct.getNutriments();
-            if (nutriments != null) {
-                String salt = nutriments.getSalt();
-                nutritionDataPer = mProduct.getNutritionDataPer();
+                            // TODO : add keyword to database
+//                            for (String s : mProduct.getKeywords()) {
+//                                if (s.toLowerCase().equals("bio") || s.toLowerCase().equals("biologique") || s.toLowerCase().equals("biologic")) {
+//                                    ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
+//                                    productPropertieView.bind(NutrimentType.BIO, "", "", SeverityType.GOOD);
+//                                    mProductPropertiesContainer.addView(productPropertieView);
+//                                }
+//                            }
 
-                for (String s : mProduct.getKeywords()) {
-                    if (s.toLowerCase().equals("bio") || s.toLowerCase().equals("biologique") || s.toLowerCase().equals("biologic")) {
-                        ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
-                        productPropertieView.bind(NutrimentType.BIO, "", "", SeverityType.GOOD);
-                        mProductPropertiesContainer.addView(productPropertieView);
+                            if (!StringUtils.isNullOrEmpty(salt)) {
+                                buildAndAddView(salt, NutrimentType.SALT);
+                            }
+                            String fat = nutriment.getFat();
+                            if (!StringUtils.isNullOrEmpty(fat)) {
+                                buildAndAddView(fat, NutrimentType.FAT);
+                            }
+                            String proteins = nutriment.getProteins();
+                            if (!StringUtils.isNullOrEmpty(proteins)) {
+                                buildAndAddView(proteins, NutrimentType.PROTEINS);
+                            }
+
+                            String sugars = nutriment.getSugars();
+                            if (!StringUtils.isNullOrEmpty(sugars)) {
+                                buildAndAddView(sugars, NutrimentType.SUGAR);
+                            }
+
+                            String energy = nutriment.getEnergyValue();
+                            if (!StringUtils.isNullOrEmpty(energy)) {
+                                buildAndAddView(energy, NutrimentType.ENERGIE);
+                            }
+
+                            if (!StringUtils.isNullOrEmpty(nutriment.getFiber())) {
+                                buildAndAddView(nutriment.getFiber(), NutrimentType.FIBER);
+                            }
+
+                            String additivesN = mDbProduct.getAdditivesN();
+
+                            if (!StringUtils.isNullOrEmpty(additivesN) && Integer.parseInt(additivesN) > 0) {
+                                ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
+                                productPropertieView.bind(NutrimentType.ADDITIVE, additivesN, "", SeverityType.BAD);
+                                mProductAdditivesContainer.addView(productPropertieView);
+                            } else {
+                                mProductAdditivesContainer.setVisibility(View.GONE);
+                            }
+                        } else {
+                            mProductPropertiesContainer.setVisibility(View.GONE);
+                            //TODO : Handle error
+                        }
                     }
-                }
+                });
 
-                if (!StringUtils.isNullOrEmpty(salt)) {
-                    buildAndAddView(salt, NutrimentType.SALT);
-                }
-                String fat = nutriments.getFat();
-                if (!StringUtils.isNullOrEmpty(fat)) {
-                    buildAndAddView(fat, NutrimentType.FAT);
-                }
-                String proteins = nutriments.getProteins();
-                if (!StringUtils.isNullOrEmpty(proteins)) {
-                    buildAndAddView(proteins, NutrimentType.PROTEINS);
-                }
 
-                String sugars = nutriments.getSugars();
-                if (!StringUtils.isNullOrEmpty(sugars)) {
-                    buildAndAddView(sugars, NutrimentType.SUGAR);
-                }
-
-                String energy = nutriments.getEnergyValue();
-                if (!StringUtils.isNullOrEmpty(energy)) {
-                    buildAndAddView(energy, NutrimentType.ENERGIE);
-                }
-
-                if (!StringUtils.isNullOrEmpty(nutriments.getFiber())) {
-                    buildAndAddView(nutriments.getFiber(), NutrimentType.FIBER);
-                }
-
-                String additivesN = mProduct.getAdditivesN();
-
-                if (!StringUtils.isNullOrEmpty(additivesN) && Integer.parseInt(additivesN) > 0) {
-                    ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
-                    productPropertieView.bind(NutrimentType.ADDITIVE, additivesN, "", SeverityType.BAD);
-                    mProductAdditivesContainer.addView(productPropertieView);
-                } else {
-                    mProductAdditivesContainer.setVisibility(View.GONE);
-                }
-            } else {
-                mProductPropertiesContainer.setVisibility(View.GONE);
-                //TODO : Handle error
             }
 
+        } else {
+            mProduct = (Product) mIProduct;
+            if (mProduct != null) {
+                mProductTitle.setText(mProduct.getProductName());
+                mProductSubtitle.setText(mProduct.getBrands());
+                Glide.with(mProductImage.getContext())
+                        .load(mProduct.getImageThumbUrl())
+                        .apply(new RequestOptions().placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_background))
+                        .into(mProductImage);
+                Nutriments nutriments = mProduct.getNutriments();
+                if (nutriments != null) {
+                    String salt = nutriments.getSalt();
+                    nutritionDataPer = mProduct.getNutritionDataPer();
+
+                    for (String s : mProduct.getKeywords()) {
+                        if (s.toLowerCase().equals("bio") || s.toLowerCase().equals("biologique") || s.toLowerCase().equals("biologic")) {
+                            ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
+                            productPropertieView.bind(NutrimentType.BIO, "", "", SeverityType.GOOD);
+                            mProductPropertiesContainer.addView(productPropertieView);
+                        }
+                    }
+
+                    if (!StringUtils.isNullOrEmpty(salt)) {
+                        buildAndAddView(salt, NutrimentType.SALT);
+                    }
+                    String fat = nutriments.getFat();
+                    if (!StringUtils.isNullOrEmpty(fat)) {
+                        buildAndAddView(fat, NutrimentType.FAT);
+                    }
+                    String proteins = nutriments.getProteins();
+                    if (!StringUtils.isNullOrEmpty(proteins)) {
+                        buildAndAddView(proteins, NutrimentType.PROTEINS);
+                    }
+
+                    String sugars = nutriments.getSugars();
+                    if (!StringUtils.isNullOrEmpty(sugars)) {
+                        buildAndAddView(sugars, NutrimentType.SUGAR);
+                    }
+
+                    String energy = nutriments.getEnergyValue();
+                    if (!StringUtils.isNullOrEmpty(energy)) {
+                        buildAndAddView(energy, NutrimentType.ENERGIE);
+                    }
+
+                    if (!StringUtils.isNullOrEmpty(nutriments.getFiber())) {
+                        buildAndAddView(nutriments.getFiber(), NutrimentType.FIBER);
+                    }
+
+                    String additivesN = mProduct.getAdditivesN();
+
+                    if (!StringUtils.isNullOrEmpty(additivesN) && Integer.parseInt(additivesN) > 0) {
+                        ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
+                        productPropertieView.bind(NutrimentType.ADDITIVE, additivesN, "", SeverityType.BAD);
+                        mProductAdditivesContainer.addView(productPropertieView);
+                    } else {
+                        mProductAdditivesContainer.setVisibility(View.GONE);
+                    }
+                } else {
+                    mProductPropertiesContainer.setVisibility(View.GONE);
+                    //TODO : Handle error
+                }
+
+            }
         }
+
 
     }
 

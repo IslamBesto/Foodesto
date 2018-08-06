@@ -8,13 +8,17 @@ import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+import com.example.saidi.foodesto.interfaces.IProduct;
+
+import java.io.Serializable;
+
 import static android.arch.persistence.room.ForeignKey.CASCADE;
 
 @Entity(tableName = "Product",
         foreignKeys = @ForeignKey(entity = DBNutriment.class, parentColumns = "Id", childColumns = "NutrimentId", onDelete = CASCADE),
         indices = {@Index("NutrimentId")})
 
-public class DBProduct {
+public class DBProduct implements Serializable, IProduct {
 
     @PrimaryKey
     @ColumnInfo(name = "Id")

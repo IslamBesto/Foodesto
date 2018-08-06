@@ -75,6 +75,16 @@ public enum DatabaseFacade {
         });
     }
 
+    public void getNutrimentsById(@NonNull final Long nutrimentId, @NonNull final DatabaseCallback<DBNutriment> callback) {
+        callInBackground(new Runnable() {
+            @Override
+            public void run() {
+                DBNutriment nutrimentById = mFoodestoDatabase.nutrimentDao().getNutrimentById(nutrimentId);
+                DatabaseFacade.notify(callback, nutrimentById);
+            }
+        });
+    }
+
     public void insertNutriment(@NonNull final DBNutriment dbNutriment, @Nullable final DatabaseCallback<Long> callback) {
         callInBackground(new Runnable() {
             @Override
