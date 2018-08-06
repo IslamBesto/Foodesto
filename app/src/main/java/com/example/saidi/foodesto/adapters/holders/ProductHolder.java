@@ -1,6 +1,7 @@
 package com.example.saidi.foodesto.adapters.holders;
 
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,6 +17,8 @@ import butterknife.ButterKnife;
 
 public class ProductHolder extends RecyclerView.ViewHolder {
 
+    public ConstraintLayout mForgroundView;
+    public ConstraintLayout mBackgroundView;
     @BindView(R.id.product_image_view)
     protected ImageView mProductImage;
     @BindView(R.id.product_title)
@@ -26,6 +29,8 @@ public class ProductHolder extends RecyclerView.ViewHolder {
     public ProductHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
+        mForgroundView = itemView.findViewById(R.id.view_foreground);
+        mBackgroundView = itemView.findViewById(R.id.view_background);
     }
 
     public void bind(@NonNull final DBProduct product) {

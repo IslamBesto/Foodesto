@@ -16,4 +16,5 @@
     <string name="bio">BIO Product</string>
     <string name="additives">This product contain additives</string>
     <string name="add_product">Add</string>
+    <string name="delete">Delete</string>
 </resources>

@@ -49,4 +49,14 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductHolder> {
     public int getItemCount() {
         return mDbProducts.size();
     }
+
+    public void removeItem(int position) {
+        mDbProducts.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void restoreItem(DBProduct dbProduct, int position) {
+        mDbProducts.add(position, dbProduct);
+        notifyItemInserted(position);
+    }
 }

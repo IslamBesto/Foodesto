@@ -2,6 +2,7 @@ package com.example.saidi.foodesto.database.models.dao;
 
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
@@ -26,4 +27,8 @@ public interface ProductDao {
     @Nullable
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(@NonNull DBProduct dbProduct);
+
+    @Nullable
+    @Delete
+    void delete(@NonNull DBProduct dbProduct);
 }

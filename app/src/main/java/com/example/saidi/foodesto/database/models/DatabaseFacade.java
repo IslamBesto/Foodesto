@@ -63,6 +63,15 @@ public enum DatabaseFacade {
         });
     }
 
+    public void deleteProduct(@NonNull final DBProduct dbProduct) {
+        callInBackground(new Runnable() {
+            @Override
+            public void run() {
+                mFoodestoDatabase.productDao().delete(dbProduct);
+            }
+        });
+    }
+
     // Nutriment
     public void getNutriments(@NonNull final DatabaseCallback<List<DBNutriment>> callback) {
         callInBackground(new Runnable() {
