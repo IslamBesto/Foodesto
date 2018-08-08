@@ -4,7 +4,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.NestedScrollView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,7 +18,6 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.saidi.foodesto.BaseFragment;
 import com.example.saidi.foodesto.R;
 import com.example.saidi.foodesto.database.models.DatabaseFacade;
-import com.example.saidi.foodesto.database.models.FoodestoDatabase;
 import com.example.saidi.foodesto.database.models.models.DBNutriment;
 import com.example.saidi.foodesto.database.models.models.DBProduct;
 import com.example.saidi.foodesto.interfaces.IProduct;
@@ -46,13 +48,20 @@ public class ProductDetailsFragment extends BaseFragment {
     protected LinearLayout mProductPropertiesContainer;
     @BindView(R.id.product_additives_container)
     protected LinearLayout mProductAdditivesContainer;
+    @BindView(R.id.grades)
+    protected TextView mGrades;
+    @BindView(R.id.no_product_error)
+    protected TextView mNoProductError;
+    @BindView(R.id.product_container)
+    protected NestedScrollView mProductcontainer;
+    @BindView(R.id.grades_info)
+    protected ImageView mInfoIcon;
     private IProduct mIProduct;
     private Product mProduct;
     private DBProduct mDbProduct;
 
     private Context mContext;
     private String nutritionDataPer;
-    private FoodestoDatabase mFoodestoDatabase;
 
     public ProductDetailsFragment() {
     }
@@ -83,7 +92,6 @@ public class ProductDetailsFragment extends BaseFragment {
         if (bundle != null) {
             mIProduct = (IProduct) bundle.getSerializable(EXTRA_PODUCT);
         }
-        mFoodestoDatabase = FoodestoDatabase.getFoodestoInstance(getContext().getApplicationContext());
     }
 
     // FIXME : optimize this shit :D
@@ -95,6 +103,15 @@ public class ProductDetailsFragment extends BaseFragment {
             if (mDbProduct != null) {
                 mProductTitle.setText(mDbProduct.getProductName());
                 mProductSubtitle.setText(mDbProduct.getBrands());
+                String nutritionGrades = mDbProduct.getNutritionGrades();
+                if (!StringUtils.isNullOrEmpty(nutritionGrades)) {
+                    mGrades.setText(nutritionGrades);
+                    int gradeBackGround = NutrimentsUtils.getGradeBackGround(nutritionGrades);
+                    mGrades.setBackground(ContextCompat.getDrawable(view.getContext(), gradeBackGround));
+                } else {
+                    mGrades.setVisibility(View.GONE);
+                    mInfoIcon.setVisibility(View.GONE);
+                }
                 Glide.with(mProductImage.getContext())
                         .load(mDbProduct.getImageThumbUrl())
                         .apply(new RequestOptions().placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_background))
@@ -158,6 +175,9 @@ public class ProductDetailsFragment extends BaseFragment {
                 });
 
 
+            } else {
+                mProductcontainer.setVisibility(View.GONE);
+                mNoProductError.setVisibility(View.VISIBLE);
             }
 
         } else {
@@ -169,6 +189,15 @@ public class ProductDetailsFragment extends BaseFragment {
                         .load(mProduct.getImageThumbUrl())
                         .apply(new RequestOptions().placeholder(R.drawable.ic_launcher_background).error(R.drawable.ic_launcher_background))
                         .into(mProductImage);
+                String nutritionGrades = mProduct.getNutritionGrades();
+                if (!StringUtils.isNullOrEmpty(nutritionGrades)) {
+                    mGrades.setText(nutritionGrades);
+                    int gradeBackGround = NutrimentsUtils.getGradeBackGround(nutritionGrades);
+                    mGrades.setBackground(ContextCompat.getDrawable(view.getContext(), gradeBackGround));
+                } else {
+                    mGrades.setVisibility(View.GONE);
+                    mInfoIcon.setVisibility(View.GONE);
+                }
                 Nutriments nutriments = mProduct.getNutriments();
                 if (nutriments != null) {
                     String salt = nutriments.getSalt();
@@ -222,6 +251,9 @@ public class ProductDetailsFragment extends BaseFragment {
                     //TODO : Handle error
                 }
 
+            } else {
+                mProductcontainer.setVisibility(View.GONE);
+                mNoProductError.setVisibility(View.VISIBLE);
             }
         }
 
@@ -281,5 +313,13 @@ public class ProductDetailsFragment extends BaseFragment {
 
     }
 
+    @OnClick(R.id.grades_info)
+    protected void onInfoClick() {
+        View view = getLayoutInflater().inflate(R.layout.view_bottom_sheet_info, null);
+
+        BottomSheetDialog dialog = new BottomSheetDialog(getContext());
+        dialog.setContentView(view);
+        dialog.show();
+    }
 
 }

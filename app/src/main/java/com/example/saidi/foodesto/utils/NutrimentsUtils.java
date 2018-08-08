@@ -3,6 +3,7 @@ package com.example.saidi.foodesto.utils;
 
 import android.support.annotation.NonNull;
 
+import com.example.saidi.foodesto.R;
 import com.example.saidi.foodesto.models.NutrimentQuality;
 import com.example.saidi.foodesto.models.NutrimentType;
 import com.example.saidi.foodesto.models.SeverityType;
@@ -213,6 +214,23 @@ public final class NutrimentsUtils {
         }
     }
 
+    public static int getGradeBackGround(@NonNull String grade) {
+        switch (grade.toLowerCase()) {
+            case "a":
+                return R.drawable.bg_circle_green;
+            case "b":
+                return R.drawable.bg_circle_green_dark;
+            case "c":
+                return R.drawable.bg_circle_yellow;
+            case "d":
+                return R.drawable.bg_circle_pink;
+            case "e":
+                return R.drawable.bg_circle_red;
+            default:
+                return R.drawable.bg_circle_green;
+
+        }
+    }
 
     private static NutrimentQuantityType getTypeOfMeasurement(@NonNull final String nutrimentDataPer) {
         String substring = nutrimentDataPer.toLowerCase().substring(nutrimentDataPer.length() - 1, nutrimentDataPer.length());

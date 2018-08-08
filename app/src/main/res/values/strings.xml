@@ -17,4 +17,15 @@
     <string name="additives">This product contain additives</string>
     <string name="add_product">Add</string>
     <string name="delete">Delete</string>
+    <string name="bad">Bad</string>
+    <string name="grade_e">E</string>
+    <string name="grade_mediocre">Mediocre</string>
+    <string name="grade_d">D</string>
+    <string name="grade_low_impact">Low impact</string>
+    <string name="grade_c">C</string>
+    <string name="grade_good">Good</string>
+    <string name="grade_b">B</string>
+    <string name="grade_very_good">Very good</string>
+    <string name="grade_a">A</string>
+    <string name="no_product_error">Sorry, no product available!</string>
 </resources>
