@@ -72,6 +72,56 @@ public enum DatabaseFacade {
         });
     }
 
+    public void getCountOfGradeE(@Nullable final DatabaseCallback<Long> callback) {
+        callInBackground(new Runnable() {
+            @Override
+            public void run() {
+                Long gradeCount = mFoodestoDatabase.productDao().getGradeECount();
+                DatabaseFacade.notify(callback, gradeCount);
+            }
+        });
+    }
+
+    public void getCountOfGradeD(@Nullable final DatabaseCallback<Long> callback) {
+        callInBackground(new Runnable() {
+            @Override
+            public void run() {
+                Long gradeCount = mFoodestoDatabase.productDao().getGradeDCount();
+                DatabaseFacade.notify(callback, gradeCount);
+            }
+        });
+    }
+
+    public void getCountOfGradeC(@Nullable final DatabaseCallback<Long> callback) {
+        callInBackground(new Runnable() {
+            @Override
+            public void run() {
+                Long gradeCount = mFoodestoDatabase.productDao().getGradeCCount();
+                DatabaseFacade.notify(callback, gradeCount);
+            }
+        });
+    }
+
+    public void getCountOfGradeB(@Nullable final DatabaseCallback<Long> callback) {
+        callInBackground(new Runnable() {
+            @Override
+            public void run() {
+                Long gradeCount = mFoodestoDatabase.productDao().getGradeBCount();
+                DatabaseFacade.notify(callback, gradeCount);
+            }
+        });
+    }
+
+    public void getCountOfGradeA(@Nullable final DatabaseCallback<Long> callback) {
+        callInBackground(new Runnable() {
+            @Override
+            public void run() {
+                Long gradeCount = mFoodestoDatabase.productDao().getGradeACount();
+                DatabaseFacade.notify(callback, gradeCount);
+            }
+        });
+    }
+
     // Nutriment
     public void getNutriments(@NonNull final DatabaseCallback<List<DBNutriment>> callback) {
         callInBackground(new Runnable() {

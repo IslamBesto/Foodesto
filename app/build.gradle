@@ -45,6 +45,8 @@ dependencies {
 
     //Firebase
     implementation 'com.google.firebase:firebase-core:16.0.0'
+    //Charts
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 
     // ML Kit barcode
     implementation 'com.google.firebase:firebase-ml-vision:16.0.0'

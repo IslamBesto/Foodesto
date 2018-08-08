@@ -9,4 +9,9 @@
     <color name="colorDivider">#BDBDBD</color>
     <color name="athens_gray">#eeeff1</color>
     <color name="white">#ffffff</color>
+    <color name="grade_a_color">#0ffc1e</color>
+    <color name="grade_b_color">#05700c</color>
+    <color name="grade_c_color">#f9ff4c</color>
+    <color name="grade_d_color">#fc8b85</color>
+    <color name="grade_e_color">#ff0000</color>
 </resources>

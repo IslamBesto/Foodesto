@@ -25,6 +25,26 @@ public interface ProductDao {
     Long getLastProductAdded();
 
     @Nullable
+    @Query("SELECT count(*) FROM Product WHERE NutritionGrades = 'e'")
+    Long getGradeECount();
+
+    @Nullable
+    @Query("SELECT count(*) FROM Product WHERE NutritionGrades = 'd'")
+    Long getGradeDCount();
+
+    @Nullable
+    @Query("SELECT count(*) FROM Product WHERE NutritionGrades = 'c'")
+    Long getGradeCCount();
+
+    @Nullable
+    @Query("SELECT count(*) FROM Product WHERE NutritionGrades = 'b'")
+    Long getGradeBCount();
+
+    @Nullable
+    @Query("SELECT count(*) FROM Product WHERE NutritionGrades = 'a'")
+    Long getGradeACount();
+
+    @Nullable
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(@NonNull DBProduct dbProduct);
 
