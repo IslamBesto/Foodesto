@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/propertie_icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -34,42 +34,42 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_medium"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="@dimen/margin_medium"
         android:layout_marginTop="@dimen/margin_medium"
-        android:text="TextView"
         android:textColor="@color/colorTextSecondary"
         android:textSize="@dimen/font_subhead"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/propertie_quantity"
         app:layout_constraintStart_toEndOf="@+id/propertie_icon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TextView" />
 
     <TextView
         android:id="@+id/propertie_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         android:textColor="@color/colorTextSecondary"
         android:textSize="@dimen/font_subhead"
         app:layout_constraintStart_toStartOf="@+id/propertie_title"
-        app:layout_constraintTop_toBottomOf="@+id/propertie_title" />
+        app:layout_constraintTop_toBottomOf="@+id/propertie_title"
+        tools:text="TextView" />
 
     <TextView
         android:id="@+id/propertie_quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
         app:layout_constraintBottom_toBottomOf="@+id/propertie_icon"
         app:layout_constraintEnd_toStartOf="@+id/propertie_severity"
-        app:layout_constraintTop_toTopOf="@+id/propertie_icon" />
+        app:layout_constraintTop_toTopOf="@+id/propertie_icon"
+        tools:text="TextView" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="@dimen/margin_medium"
         app:layout_constraintBottom_toBottomOf="@+id/propertie_quantity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/propertie_severity"

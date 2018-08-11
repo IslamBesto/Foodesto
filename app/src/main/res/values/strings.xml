@@ -28,4 +28,6 @@
     <string name="grade_very_good">Very good</string>
     <string name="grade_a">A</string>
     <string name="no_product_error">Sorry, no product available!</string>
+    <string name="application_name">Foodesto</string>
+    <string name="product_details_title">Product details</string>
 </resources>

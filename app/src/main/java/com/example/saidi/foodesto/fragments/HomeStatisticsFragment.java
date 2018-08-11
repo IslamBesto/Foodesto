@@ -55,6 +55,7 @@ public class HomeStatisticsFragment extends BaseFragment implements IHomeFragmen
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getBaseActivity().getSupportActionBar().setTitle(getString(R.string.home_statistics_label));
         DatabaseFacade.INSTANCE.getCountOfGradeE(new DatabaseFacade.DatabaseCallback<Long>() {
             @Override
             public void databaseCallback(@Nullable Long result) {

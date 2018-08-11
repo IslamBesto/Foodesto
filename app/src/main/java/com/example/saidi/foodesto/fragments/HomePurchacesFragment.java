@@ -59,6 +59,7 @@ public class HomePurchacesFragment extends BaseFragment implements IHomeFragment
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getBaseActivity().getSupportActionBar().setTitle(getString(R.string.home_cart_purchase));
         mProductsRv.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         mProductsRv.setLayoutManager(

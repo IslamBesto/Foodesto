@@ -26,7 +26,6 @@
             android:gravity="center"
             android:text="@string/grade_very_good"
             android:textSize="@dimen/font_subhead"
-            android:textStyle="bold"
 
             />
     </LinearLayout>
@@ -50,10 +49,7 @@
             android:layout_weight="4"
             android:gravity="center"
             android:text="@string/grade_good"
-            android:textSize="@dimen/font_subhead"
-            android:textStyle="bold"
-
-            />
+            android:textSize="@dimen/font_subhead" />
     </LinearLayout>
 
     <LinearLayout
@@ -75,10 +71,7 @@
             android:layout_weight="4"
             android:gravity="center"
             android:text="@string/grade_low_impact"
-            android:textSize="@dimen/font_subhead"
-            android:textStyle="bold"
-
-            />
+            android:textSize="@dimen/font_subhead" />
     </LinearLayout>
 
     <LinearLayout
@@ -100,10 +93,7 @@
             android:layout_weight="4"
             android:gravity="center"
             android:text="@string/grade_mediocre"
-            android:textSize="@dimen/font_subhead"
-            android:textStyle="bold"
-
-            />
+            android:textSize="@dimen/font_subhead" />
     </LinearLayout>
 
     <LinearLayout
@@ -125,10 +115,7 @@
             android:layout_weight="4"
             android:gravity="center"
             android:text="@string/bad"
-            android:textSize="@dimen/font_subhead"
-            android:textStyle="bold"
-
-            />
+            android:textSize="@dimen/font_subhead" />
     </LinearLayout>
 
 </LinearLayout>
