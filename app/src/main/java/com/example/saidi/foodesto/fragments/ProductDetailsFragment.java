@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,9 +33,9 @@ import com.example.saidi.foodesto.models.SeverityType;
 import com.example.saidi.foodesto.utils.NutrimentsUtils;
 import com.example.saidi.foodesto.utils.StringUtils;
 import com.example.saidi.foodesto.views.ProductPropertieView;
+import com.example.saidi.foodesto.widget.FoodestoAppWidgetService;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 public class ProductDetailsFragment extends BaseFragment {
 
@@ -57,6 +58,8 @@ public class ProductDetailsFragment extends BaseFragment {
     protected TextView mNoProductError;
     @BindView(R.id.product_container)
     protected NestedScrollView mProductcontainer;
+    @BindView(R.id.add_button)
+    protected Button mAddButton;
     private IProduct mIProduct;
     private Product mProduct;
     private DBProduct mDbProduct;
@@ -101,6 +104,12 @@ public class ProductDetailsFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getBaseActivity().getSupportActionBar().setTitle(R.string.product_details_title);
+        mAddButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addProductToDb();
+            }
+        });
         if (isFromDB) {
             mDbProduct = (DBProduct) mIProduct;
             if (mDbProduct != null) {
@@ -287,8 +296,12 @@ public class ProductDetailsFragment extends BaseFragment {
         mProductPropertiesContainer.addView(productPropertieView);
     }
 
-    @OnClick(R.id.add_button)
-    protected void onAddClick() {
+//    @OnClick(R.id.add_button)
+//    protected void onAddClick() {
+//        addProductToDb();
+//    }
+
+    private void addProductToDb() {
         DBNutriment dbNutriment = new DBNutriment();
         Nutriments nutriments = mProduct.getNutriments();
         dbNutriment.setCarbohydrates(nutriments.getCarbohydrates());
@@ -301,7 +314,7 @@ public class ProductDetailsFragment extends BaseFragment {
         DatabaseFacade.INSTANCE.insertNutriment(dbNutriment, new DatabaseFacade.DatabaseCallback<Long>() {
             @Override
             public void databaseCallback(@Nullable Long result) {
-                DBProduct dbProduct = new DBProduct();
+                final DBProduct dbProduct = new DBProduct();
                 dbProduct.setId(Long.parseLong(mProduct.getCode()));
                 dbProduct.setAdditives(mProduct.getAdditives());
                 dbProduct.setAdditivesN(mProduct.getAdditivesN());
@@ -325,6 +338,7 @@ public class ProductDetailsFragment extends BaseFragment {
                     public void databaseCallback(@Nullable Long result) {
                         Snackbar snackbar = Snackbar.make(mProductPropertiesContainer, "Product is added", Snackbar.LENGTH_LONG);
                         snackbar.show();
+                        FoodestoAppWidgetService.startActionUpdateRecipeWidgets(getContext(), dbProduct);
                     }
                 });
             }
