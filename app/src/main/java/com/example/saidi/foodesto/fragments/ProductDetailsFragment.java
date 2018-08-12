@@ -111,6 +111,7 @@ public class ProductDetailsFragment extends BaseFragment {
             }
         });
         if (isFromDB) {
+            mAddButton.setVisibility(View.GONE);
             mDbProduct = (DBProduct) mIProduct;
             if (mDbProduct != null) {
                 mProductTitle.setText(mDbProduct.getProductName());

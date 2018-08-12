@@ -9,7 +9,6 @@ import android.widget.RemoteViews;
 
 import com.example.saidi.foodesto.MainActivity;
 import com.example.saidi.foodesto.R;
-import com.example.saidi.foodesto.activities.BarCodeActivity;
 import com.example.saidi.foodesto.database.models.models.DBProduct;
 
 
@@ -27,7 +26,7 @@ public class FoodestoAppWidget extends AppWidgetProvider {
         final RemoteViews views = new RemoteViews(context.getPackageName(),
                 R.layout.product_widget_provider);
         PendingIntent pendingIntent;
-        Intent intent = new Intent(context, BarCodeActivity.class);
+        Intent intent = new Intent(context, MainActivity.class);
         if (dbProduct != null) {
             Intent intentDetail = new Intent(context, MainActivity.class);
             intentDetail.putExtra(KEY_PRODUCT, dbProduct);
