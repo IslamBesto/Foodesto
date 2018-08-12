@@ -141,6 +141,7 @@ public class HomeStatisticsFragment extends BaseFragment implements IHomeFragmen
                 PieDataSet pieDataSet = new PieDataSet(pieEntries, "Products Statistics");
                 pieDataSet.setColors(colors);
                 mProductStatistics.setEntryLabelColor(Color.BLACK);
+                mProductStatistics.setCenterText("Purchases quality");
                 PieData pieData = new PieData(pieDataSet);
                 pieData.setValueTextColor(Color.BLACK);
                 pieData.setValueTextSize(20f);
