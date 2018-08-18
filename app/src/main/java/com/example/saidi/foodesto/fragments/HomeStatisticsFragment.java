@@ -1,5 +1,4 @@
 package com.example.saidi.foodesto.fragments;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -23,21 +22,18 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 
-/**
- * Created by saidi on 26/07/2018.
- */
-
 public class HomeStatisticsFragment extends BaseFragment implements IHomeFragment {
     @BindView(R.id.pie_chart)
     protected PieChart mProductStatistics;
-    Long countE;
-    Long countD;
-    Long countC;
-    Long countB;
-    Long countA;
+    private Long countE;
+    private Long countD;
+    private Long countC;
+    private Long countB;
+    private Long countA;
 
 
     public static BaseFragment newInstance() {
+
         return new HomeStatisticsFragment();
     }
 

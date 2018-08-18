@@ -54,27 +54,32 @@ public class MainActivity extends BaseActivity implements IHomeFragment {
         curvedBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (curvedBottomNavigationView.getSelectedItemId() == item.getItemId()) {
-                    return false;
-                }
-                clearBackStack();
-                switch (item.getItemId()) {
-                    case R.id.home_statistics_nav_menu_item:
-                        // Home Fragment
-                        pushFragment(HomeStatisticsFragment.newInstance());
-                        return true;
-                    case R.id.home_scan_nav_menu_item:
-                        // pushFragment(HomeDocumentsFragment.newInstance());
-                        if (isPermissionGranted()) startBarCodeActivity();
-                        return true;
-                    case R.id.home_purchace_nav_menu_item:
-                        pushFragment(HomePurchacesFragment.newInstance());
-                        return true;
-                }
-                return false;
+                return selectFragment(item, curvedBottomNavigationView);
             }
         });
-        curvedBottomNavigationView.setSelectedItemId(DEFAULT_HOME_ITEM);
+        MenuItem selectedItem =
+                curvedBottomNavigationView.getMenu().getItem(0);
+        selectFragment(selectedItem, curvedBottomNavigationView);
+    }
+
+    private boolean selectFragment(@NonNull MenuItem item, CurvedBottomNavigationView curvedBottomNavigationView) {
+//        if (curvedBottomNavigationView.getSelectedItemId() == item.getItemId()) {
+//            return false;
+//        }
+        clearBackStack();
+        switch (item.getItemId()) {
+            case R.id.home_statistics_nav_menu_item:
+                // Home Fragment
+                pushFragment(HomeStatisticsFragment.newInstance());
+                return true;
+            case R.id.home_scan_nav_menu_item:
+                if (isPermissionGranted()) startBarCodeActivity();
+                return true;
+            case R.id.home_purchace_nav_menu_item:
+                pushFragment(HomePurchacesFragment.newInstance());
+                return true;
+        }
+        return false;
     }
 
     /**
@@ -112,7 +117,8 @@ public class MainActivity extends BaseActivity implements IHomeFragment {
                 return;
             }
             final List<Fragment> fragments = fragmentManager.getFragments();
-            if (fragments.get(backStackEntryCount - 1) instanceof IHomeFragment) {
+            if (fragments.get(backStackEntryCount
+            ) instanceof IHomeFragment) {
                 curvedBottomNavigationView.setSelectedItemId(DEFAULT_HOME_ITEM);
                 return;
             }

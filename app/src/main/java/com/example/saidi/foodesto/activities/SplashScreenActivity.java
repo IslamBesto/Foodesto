@@ -22,7 +22,7 @@ import butterknife.ButterKnife;
 
 public class SplashScreenActivity extends BaseActivity {
     private static final String TAG = SplashScreenActivity.class.getSimpleName();
-    private static final int SPLASH_SCREEN_DURATION_MS = (BuildConfig.DEBUG ? 3000 : 1500);
+    private static final int SPLASH_SCREEN_DURATION_MS = (BuildConfig.DEBUG ? 500 : 1500);
     @BindView(R.id.splash_icon)
     protected ImageView mSplashIcon;
     @BindView(R.id.app_name)
