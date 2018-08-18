@@ -103,6 +103,7 @@ public class ProductDetailsFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getBaseActivity().getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getBaseActivity().getSupportActionBar().setTitle(R.string.product_details_title);
         mAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
