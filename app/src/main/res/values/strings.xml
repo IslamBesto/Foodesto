@@ -35,4 +35,6 @@
     <string name="scan_new_product">Scan new product</string>
     <string name="product_image">product_image</string>
     <string name="add_product_to_chart">add product to purchase chart</string>
+    <string name="product_statistics_title">Products Statistics</string>
+    <string name="purchace_quality">Purchases quality</string>
 </resources>

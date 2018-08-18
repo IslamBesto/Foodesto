@@ -53,6 +53,9 @@ public class HomeStatisticsFragment extends BaseFragment implements IHomeFragmen
         super.onViewCreated(view, savedInstanceState);
         getBaseActivity().getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getBaseActivity().getSupportActionBar().setTitle(getString(R.string.home_statistics_label));
+        if (!isAdded()) {
+            return;
+        }
         DatabaseFacade.INSTANCE.getCountOfGradeE(new DatabaseFacade.DatabaseCallback<Long>() {
             @Override
             public void databaseCallback(@Nullable Long result) {
@@ -105,8 +108,9 @@ public class HomeStatisticsFragment extends BaseFragment implements IHomeFragmen
                 } else {
                     countA = 0L;
                 }
+                if (!isAdded()) return;
                 Long[] productSolds = {countA, countB, countC, countD, countE};
-                String[] productNames = {getString(R.string.grade_very_good),
+                String[] productNames = {getContext().getString(R.string.grade_very_good),
                         getString(R.string.grade_good),
                         getString(R.string.grade_low_impact),
                         getString(R.string.grade_mediocre),
@@ -135,10 +139,10 @@ public class HomeStatisticsFragment extends BaseFragment implements IHomeFragmen
 
                 }
 
-                PieDataSet pieDataSet = new PieDataSet(pieEntries, "Products Statistics");
+                PieDataSet pieDataSet = new PieDataSet(pieEntries, getString(R.string.product_statistics_title));
                 pieDataSet.setColors(colors);
                 mProductStatistics.setEntryLabelColor(Color.BLACK);
-                mProductStatistics.setCenterText("Purchases quality");
+                mProductStatistics.setCenterText(getString(R.string.purchace_quality));
                 PieData pieData = new PieData(pieDataSet);
                 pieData.setValueTextColor(Color.BLACK);
                 pieData.setValueTextSize(20f);

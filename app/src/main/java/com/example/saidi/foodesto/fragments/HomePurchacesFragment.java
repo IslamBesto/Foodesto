@@ -29,9 +29,9 @@ import butterknife.BindView;
 
 
 public class HomePurchacesFragment extends BaseFragment implements IHomeFragment, RecyclerItemTouchHelper.RecyclerItemTouchHelperListener {
+    private static int currentVisiblePosition;
     @BindView(R.id.products_purchaced_list)
     protected RecyclerView mProductsRv;
-
     private List<DBProduct> mDbProducts;
     private ProductsAdapter mProductsAdapter;
 
@@ -50,17 +50,34 @@ public class HomePurchacesFragment extends BaseFragment implements IHomeFragment
 
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        currentVisiblePosition = 0;
+        currentVisiblePosition = ((LinearLayoutManager) mProductsRv.getLayoutManager()).findFirstCompletelyVisibleItemPosition();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mProductsRv.getLayoutManager().scrollToPosition(currentVisiblePosition);
+        currentVisiblePosition = 0;
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getBaseActivity().getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getBaseActivity().getSupportActionBar().setTitle(getString(R.string.home_cart_purchase));
+        if (!isAdded()) return;
         mProductsRv.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         mProductsRv.setLayoutManager(

@@ -107,6 +107,19 @@ public class MainActivity extends BaseActivity implements IHomeFragment {
     }
 
     @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("SelectedItemId", mBottomNavigationViewWithFab.getCurvedBottomNavigationView().getSelectedItemId());
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        int selectedItemId = savedInstanceState.getInt("SelectedItemId");
+        mBottomNavigationViewWithFab.getCurvedBottomNavigationView().setSelectedItemId(selectedItemId);
+    }
+
+    @Override
     public void onBackPressed() {
         final FragmentManager fragmentManager = getSupportFragmentManager();
         final int backStackEntryCount = fragmentManager.getBackStackEntryCount();

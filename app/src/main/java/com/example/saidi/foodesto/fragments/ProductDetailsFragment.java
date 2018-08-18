@@ -144,6 +144,7 @@ public class ProductDetailsFragment extends BaseFragment {
                                     ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
                                     productPropertieView.bind(NutrimentType.BIO, "", "", SeverityType.GOOD);
                                     mProductPropertiesContainer.addView(productPropertieView);
+                                    break;
                                 }
                             }
 
