@@ -3,6 +3,7 @@ package com.example.saidi.foodesto.database.models;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
+import android.arch.persistence.room.TypeConverters;
 import android.content.Context;
 import android.util.Log;
 
@@ -12,6 +13,7 @@ import com.example.saidi.foodesto.database.models.models.DBNutriment;
 import com.example.saidi.foodesto.database.models.models.DBProduct;
 
 @Database(entities = {DBProduct.class, DBNutriment.class}, version = 1, exportSchema = false)
+@TypeConverters({Converter.class})
 public abstract class FoodestoDatabase extends RoomDatabase {
 
     private static final String TAG = FoodestoDatabase.class.getSimpleName();

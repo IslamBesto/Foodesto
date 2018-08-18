@@ -8,6 +8,7 @@ import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.NestedScrollView;
+import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -35,6 +36,8 @@ import com.example.saidi.foodesto.utils.StringUtils;
 import com.example.saidi.foodesto.views.ProductPropertieView;
 import com.example.saidi.foodesto.widget.FoodestoAppWidgetService;
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
 
 public class ProductDetailsFragment extends BaseFragment {
@@ -60,6 +63,8 @@ public class ProductDetailsFragment extends BaseFragment {
     protected NestedScrollView mProductcontainer;
     @BindView(R.id.add_button)
     protected Button mAddButton;
+    @BindView(R.id.product_properties_card)
+    protected CardView mProductPropertiesCard;
     private IProduct mIProduct;
     private Product mProduct;
     private DBProduct mDbProduct;
@@ -99,7 +104,6 @@ public class ProductDetailsFragment extends BaseFragment {
         }
     }
 
-    // FIXME : optimize this shit :D
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -135,15 +139,13 @@ public class ProductDetailsFragment extends BaseFragment {
                         if (nutriment != null) {
                             String salt = nutriment.getSalt();
                             nutritionDataPer = mDbProduct.getNutritionDataPer();
-
-                            // TODO : add keyword to database
-//                            for (String s : mProduct.getKeywords()) {
-//                                if (s.toLowerCase().equals("bio") || s.toLowerCase().equals("biologique") || s.toLowerCase().equals("biologic")) {
-//                                    ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
-//                                    productPropertieView.bind(NutrimentType.BIO, "", "", SeverityType.GOOD);
-//                                    mProductPropertiesContainer.addView(productPropertieView);
-//                                }
-//                            }
+                            for (String s : mDbProduct.getKeywords()) {
+                                if (s.toLowerCase().equals("bio") || s.toLowerCase().equals("biologique") || s.toLowerCase().equals("biologic")) {
+                                    ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
+                                    productPropertieView.bind(NutrimentType.BIO, "", "", SeverityType.GOOD);
+                                    mProductPropertiesContainer.addView(productPropertieView);
+                                }
+                            }
 
                             if (!StringUtils.isNullOrEmpty(salt)) {
                                 buildAndAddView(salt, NutrimentType.SALT);
@@ -181,8 +183,7 @@ public class ProductDetailsFragment extends BaseFragment {
                                 mProductAdditivesContainer.setVisibility(View.GONE);
                             }
                         } else {
-                            mProductPropertiesContainer.setVisibility(View.GONE);
-                            //TODO : Handle error
+                            mProductPropertiesCard.setVisibility(View.GONE);
                         }
                     }
                 });
@@ -220,6 +221,7 @@ public class ProductDetailsFragment extends BaseFragment {
                             ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
                             productPropertieView.bind(NutrimentType.BIO, "", "", SeverityType.GOOD);
                             mProductPropertiesContainer.addView(productPropertieView);
+                            break;
                         }
                     }
 
@@ -259,8 +261,7 @@ public class ProductDetailsFragment extends BaseFragment {
                         mProductAdditivesContainer.setVisibility(View.GONE);
                     }
                 } else {
-                    mProductPropertiesContainer.setVisibility(View.GONE);
-                    //TODO : Handle error
+                    mProductPropertiesCard.setVisibility(View.GONE);
                 }
 
             } else {
@@ -298,11 +299,6 @@ public class ProductDetailsFragment extends BaseFragment {
         mProductPropertiesContainer.addView(productPropertieView);
     }
 
-//    @OnClick(R.id.add_button)
-//    protected void onAddClick() {
-//        addProductToDb();
-//    }
-
     private void addProductToDb() {
         DBNutriment dbNutriment = new DBNutriment();
         Nutriments nutriments = mProduct.getNutriments();
@@ -335,10 +331,11 @@ public class ProductDetailsFragment extends BaseFragment {
                 dbProduct.setNutritionDataPer(mProduct.getNutritionDataPer());
                 dbProduct.setNutritionGrades(mProduct.getNutritionGrades());
                 dbProduct.setStores(mProduct.getStores());
+                dbProduct.setKeywords((ArrayList<String>) mProduct.getKeywords());
                 DatabaseFacade.INSTANCE.insertProduct(dbProduct, new DatabaseFacade.DatabaseCallback<Long>() {
                     @Override
                     public void databaseCallback(@Nullable Long result) {
-                        Snackbar snackbar = Snackbar.make(mProductPropertiesContainer, "Product is added", Snackbar.LENGTH_LONG);
+                        Snackbar snackbar = Snackbar.make(mProductPropertiesContainer, R.string.snack_product_added, Snackbar.LENGTH_LONG);
                         snackbar.show();
                         FoodestoAppWidgetService.startActionUpdateRecipeWidgets(getContext(), dbProduct);
                     }

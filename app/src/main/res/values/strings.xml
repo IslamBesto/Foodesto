@@ -31,4 +31,5 @@
     <string name="application_name">Foodesto</string>
     <string name="product_details_title">Product details</string>
     <string name="no_product_widget">Scan your first product</string>
+    <string name="snack_product_added">Product is added</string>
 </resources>

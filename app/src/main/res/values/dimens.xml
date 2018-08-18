@@ -36,4 +36,5 @@
     <dimen name="elevation">6dp</dimen>
     <dimen name="card_corner_radius">4dp</dimen>
     <dimen name="widget_margin">8dp</dimen>
+    <dimen name="card_radius">4dp</dimen>
 </resources>

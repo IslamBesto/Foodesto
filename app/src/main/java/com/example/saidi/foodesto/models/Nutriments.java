@@ -1,7 +1,6 @@
 
 package com.example.saidi.foodesto.models;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
@@ -29,118 +28,114 @@ public class Nutriments implements Serializable {
     @SerializedName("salt")
     private String salt;
     @SerializedName("saturated-fat_unit")
-    @Expose
     private String saturatedFatUnit;
     @SerializedName("fiber_value")
-    @Expose
     private String fiberValue;
     @SerializedName("proteins_value")
-    @Expose
     private String proteinsValue;
     @SerializedName("carbohydrates_unit")
-    @Expose
     private String carbohydratesUnit;
     @SerializedName("energy_serving")
-    @Expose
+
     private String energyServing;
     @SerializedName("salt_value")
-    @Expose
+
     private String saltValue;
     @SerializedName("energy")
-    @Expose
+
     private String energy;
     @SerializedName("saturated-fat_value")
-    @Expose
+
     private String saturatedFatValue;
     @SerializedName("carbohydrates_100g")
-    @Expose
+
     private String carbohydrates100g;
     @SerializedName("sugars_serving")
-    @Expose
+
     private String sugarsServing;
     @SerializedName("salt_unit")
-    @Expose
+
     private String saltUnit;
     @SerializedName("energy_unit")
-    @Expose
+
     private String energyUnit;
     @SerializedName("fat")
-    @Expose
+
     private String fat;
     @SerializedName("fiber")
-    @Expose
+
     private String fiber;
     @SerializedName("saturated-fat_serving")
-    @Expose
+
     private String saturatedFatServing;
     @SerializedName("fat_value")
-    @Expose
+
     private String fatValue;
     @SerializedName("saturated-fat_100g")
-    @Expose
+
     private String saturatedFat100g;
     @SerializedName("carbohydrates")
-    @Expose
+
     private String carbohydrates;
     @SerializedName("energy_value")
-    @Expose
+
     private String energyValue;
     @SerializedName("sugars_100g")
-    @Expose
+
     private String sugars100g;
     @SerializedName("sugars_value")
-    @Expose
+
     private String sugarsValue;
     @SerializedName("sodium_100g")
-    @Expose
+
     private String sodium100g;
     @SerializedName("carbohydrates_serving")
-    @Expose
+
     private String carbohydratesServing;
     @SerializedName("carbohydrates_value")
-    @Expose
+
     private String carbohydratesValue;
     @SerializedName("fiber_unit")
-    @Expose
+
     private String fiberUnit;
     @SerializedName("sugars_unit")
-    @Expose
+
     private String sugarsUnit;
     @SerializedName("sodium_value")
-    @Expose
+
     private String sodiumValue;
     @SerializedName("sodium_unit")
-    @Expose
+
     private String sodiumUnit;
     @SerializedName("proteins_unit")
-    @Expose
+
     private String proteinsUnit;
     @SerializedName("fiber_serving")
-    @Expose
+
     private String fiberServing;
     @SerializedName("salt_100g")
-    @Expose
+
     private String salt100g;
     @SerializedName("fat_serving")
-    @Expose
+
     private String fatServing;
     @SerializedName("energy_100g")
-    @Expose
+
     private String energy100g;
     @SerializedName("proteins")
-    @Expose
+
     private String proteins;
     @SerializedName("nutrition-score-fr_100g")
-    @Expose
+
     private Integer nutritionScoreFr100g;
     @SerializedName("nutrition-score-fr")
-    @Expose
+
     private Integer nutritionScoreFr;
     @SerializedName("proteins_100g")
-    @Expose
+
     private String proteins100g;
     @SerializedName("saturated-fat")
-    @Expose
+
     private String saturatedFat;
 
     public String getSugars() {

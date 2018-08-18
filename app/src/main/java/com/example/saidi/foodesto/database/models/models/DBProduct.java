@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import com.example.saidi.foodesto.interfaces.IProduct;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 import static android.arch.persistence.room.ForeignKey.CASCADE;
 
@@ -60,6 +61,8 @@ public class DBProduct implements Serializable, IProduct {
     private String productName;
     @ColumnInfo(name = "PalmOil")
     private String ingredientsThatMayBeFromPalmOilN;
+    @ColumnInfo(name = "Keywords")
+    private ArrayList<String> keywords = new ArrayList<>();
 
     @NonNull
     public Long getId() {
@@ -212,5 +215,13 @@ public class DBProduct implements Serializable, IProduct {
 
     public void setIngredientsThatMayBeFromPalmOilN(String ingredientsThatMayBeFromPalmOilN) {
         this.ingredientsThatMayBeFromPalmOilN = ingredientsThatMayBeFromPalmOilN;
+    }
+
+    public ArrayList<String> getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(ArrayList<String> keywords) {
+        this.keywords = keywords;
     }
 }

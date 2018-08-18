@@ -1,22 +1,17 @@
 
 package com.example.saidi.foodesto.models;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Foodesto {
 
     @SerializedName("product")
-    @Expose
     private Product product;
     @SerializedName("code")
-    @Expose
     private String code;
     @SerializedName("status_verbose")
-    @Expose
     private String statusVerbose;
     @SerializedName("status")
-    @Expose
     private Integer status;
 
     public Product getProduct() {

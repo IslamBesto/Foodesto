@@ -116,9 +116,11 @@ public class ProductPropertieView extends FrameLayout {
             case BIO:
                 mPropertieTitle.setText(R.string.bio);
                 setDrawable(R.drawable.ic_bio);
+                break;
             case ADDITIVE:
                 mPropertieTitle.setText(R.string.additives);
                 setDrawable(R.drawable.ic_additive);
+                break;
             default:
                 break;
         }
