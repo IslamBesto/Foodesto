@@ -37,7 +37,8 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:focusable="true">
 
                     <ImageView
                         android:id="@+id/product_image_view"
@@ -46,6 +47,7 @@
                         android:layout_marginBottom="@dimen/margin_medium"
                         android:layout_marginStart="@dimen/margin_medium"
                         android:layout_marginTop="@dimen/margin_medium"
+                        android:contentDescription="@string/product_image"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintDimensionRatio="w,1:1"
                         app:layout_constraintStart_toStartOf="parent"
@@ -92,6 +94,7 @@
                         android:layout_marginBottom="@dimen/margin_medium"
                         android:layout_marginEnd="@dimen/margin_medium"
                         android:background="@drawable/bg_rounded_green"
+                        android:contentDescription="@string/add_product_to_chart"
                         android:drawableEnd="@drawable/ic_shopping_basket"
                         android:elevation="@dimen/elevation"
                         android:foreground="?attr/selectableItemBackgroundBorderless"

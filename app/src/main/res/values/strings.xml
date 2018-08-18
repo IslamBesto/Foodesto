@@ -32,4 +32,7 @@
     <string name="product_details_title">Product details</string>
     <string name="no_product_widget">Scan your first product</string>
     <string name="snack_product_added">Product is added</string>
+    <string name="scan_new_product">Scan new product</string>
+    <string name="product_image">product_image</string>
+    <string name="add_product_to_chart">add product to purchase chart</string>
 </resources>

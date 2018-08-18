@@ -23,6 +23,7 @@
             android:layout_height="@dimen/fab_size"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="-32dp"
+            android:contentDescription="@string/scan_new_product"
             android:scaleType="fitXY"
             android:src="@drawable/ic_barcode"
             app:borderWidth="0dp"
