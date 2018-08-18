@@ -81,7 +81,6 @@ public class HomePurchacesFragment extends BaseFragment implements IHomeFragment
                     mProductsAdapter = new ProductsAdapter(result, new IOnAdapterItemClickListener<DBProduct>() {
                         @Override
                         public void onAdapterItemClickListener(@Nullable RecyclerView.ViewHolder viewHolder, @NonNull DBProduct dbProduct) {
-                            //Toast.makeText(getContext(), "Open details", Toast.LENGTH_SHORT).show();
                             getMainActivity().pushFragment(ProductDetailsFragment.newInstance(dbProduct));
                         }
                     });
