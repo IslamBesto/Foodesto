@@ -36,6 +36,8 @@ public class ProductPropertieView extends FrameLayout {
     protected TextView mPropertieQuantity;
     @BindView(R.id.propertie_severity)
     protected View mPropertieSeverity;
+    @BindView(R.id.chevron)
+    protected ImageView mChevron;
 
     public ProductPropertieView(@NonNull Context context) {
         super(context);
@@ -120,6 +122,7 @@ public class ProductPropertieView extends FrameLayout {
             case ADDITIVE:
                 mPropertieTitle.setText(R.string.additives);
                 setDrawable(R.drawable.ic_additive);
+                mChevron.setVisibility(VISIBLE);
                 break;
             default:
                 break;

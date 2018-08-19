@@ -1,4 +1,5 @@
 package com.example.saidi.foodesto.fragments;
+
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -156,4 +157,5 @@ public class HomeStatisticsFragment extends BaseFragment implements IHomeFragmen
 
 
     }
+
 }

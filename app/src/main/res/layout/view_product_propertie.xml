@@ -27,7 +27,7 @@
         android:layout_marginEnd="@dimen/margin_medium"
         android:background="@drawable/ic_orange_circle"
         app:layout_constraintBottom_toBottomOf="@+id/propertie_quantity"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/chevron"
         app:layout_constraintTop_toTopOf="@+id/propertie_quantity" />
 
     <TextView
@@ -67,10 +67,11 @@
         tools:text="TextView" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/chevron"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_medium"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/propertie_quantity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/propertie_severity"

@@ -55,14 +55,14 @@ public class DBProduct implements Serializable, IProduct {
     private String brands;
     @ColumnInfo(name = "NutritionGrades")
     private String nutritionGrades;
-    @ColumnInfo(name = "Additives")
-    private String additives;
     @ColumnInfo(name = "ProductName")
     private String productName;
     @ColumnInfo(name = "PalmOil")
     private String ingredientsThatMayBeFromPalmOilN;
     @ColumnInfo(name = "Keywords")
     private ArrayList<String> keywords = new ArrayList<>();
+    @ColumnInfo(name = "Additives")
+    private ArrayList<String> additivesTags = new ArrayList<>();
 
     @NonNull
     public Long getId() {
@@ -192,15 +192,6 @@ public class DBProduct implements Serializable, IProduct {
     public void setNutritionGrades(String nutritionGrades) {
         this.nutritionGrades = nutritionGrades;
     }
-
-    public String getAdditives() {
-        return additives;
-    }
-
-    public void setAdditives(String additives) {
-        this.additives = additives;
-    }
-
     public String getProductName() {
         return productName;
     }
@@ -223,5 +214,13 @@ public class DBProduct implements Serializable, IProduct {
 
     public void setKeywords(ArrayList<String> keywords) {
         this.keywords = keywords;
+    }
+
+    public ArrayList<String> getAdditivesTags() {
+        return additivesTags;
+    }
+
+    public void setAdditivesTags(ArrayList<String> additivesTags) {
+        this.additivesTags = additivesTags;
     }
 }

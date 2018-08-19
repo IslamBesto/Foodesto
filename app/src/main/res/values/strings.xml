@@ -37,4 +37,5 @@
     <string name="add_product_to_chart">add product to purchase chart</string>
     <string name="product_statistics_title">Products Statistics</string>
     <string name="purchace_quality">Purchases quality</string>
+    <string name="additivs_list">Additives list</string>
 </resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/margin_medium">
+
+    <TextView
+        android:id="@+id/additive_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textSize="@dimen/font_subhead"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="E322" />
+
+    <TextView
+        android:id="@+id/additive_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintStart_toStartOf="@+id/additive_code"
+        app:layout_constraintTop_toBottomOf="@+id/additive_code"
+        tools:text="Lécithines" />
+
+    <TextView
+        android:id="@+id/additive_impact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/additive_name"
+        app:layout_constraintEnd_toStartOf="@+id/additive_impact_color"
+        app:layout_constraintTop_toTopOf="@+id/additive_name"
+        tools:text="Sans Impact" />
+
+    <TextView
+        android:id="@+id/additive_impact_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/additive_impact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/additive_impact"
+        tools:background="@drawable/bg_circle_green" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,2481 @@
+﻿{
+  "additives": [
+    {
+      "code": "E100",
+      "name": "Curcumin, curcumin Yellow",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E101",
+      "name": "Riboflavin, riboflavin-5'-phosphate, Vitamin B2",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E102",
+      "name": "tartrazine",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E104",
+      "name": "Quinoline yellow, quinoline yellow",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E105",
+      "name": "yellow solid",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E107",
+      "name": "yellow 2G",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E110",
+      "name": "Yellow orange S, Sunset Yellow FCF",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E111",
+      "name": "Orange GGN, orange Alpha-naphthol",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E120",
+      "name": "Cochineal, Carminic acid, Carmine",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E121",
+      "name": "Citrus Red No.. 2 (f archil, Orcein)",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E122",
+      "name": "Azorubin, Carmoisine",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E123",
+      "name": "Amaranth, Amaranth",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E124",
+      "name": "Ponceau 4R, Cochineal Red A",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E125",
+      "name": "Ponceau SX, Scarlet GN GN Scarlet",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E126",
+      "name": "Ponceau 6R",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E127",
+      "name": "Erythrosine",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E128",
+      "name": "Red 2G Azogeranine",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E129",
+      "name": "Allura Red AC",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E130",
+      "name": "Blue anthraquinone Blue solanthrène RS",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E131",
+      "name": "Patent Blue V",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E132",
+      "name": "Indigo carmine (e) indigo",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E133",
+      "name": "Brilliant Blue FCF",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E140",
+      "name": "Chlorophylls, Chlorophyllins",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E141",
+      "name": "Cupric Complexes chlorophilles and chlorophyllins",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E142",
+      "name": "S Green, Bright Green BS Green lissamine",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E143",
+      "name": "Green FCF",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E150a",
+      "name": "Caramel I - plain (caustic caramel)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E150b",
+      "name": "Caramel II - process caustic sulfite",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E150c",
+      "name": "Caramel III - ammonia process",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E150d",
+      "name": "Caramel IV - process the sulphite ammonia",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E151",
+      "name": "Brilliant Black BN, Black PN, black Naphthol",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E152",
+      "name": "Carbon Black (hydrocarbon, ex-Black 7984)",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E153",
+      "name": "charcoal, vegetable Black",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E154",
+      "name": "brown FK",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E155",
+      "name": "Brown HT, Chocolate Brown HT",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E160a",
+      "name": "Carotene (beta), β-carotene, provitamin A",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E160b",
+      "name": "Annatto, annatto, bixin, Norbixin",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E160c",
+      "name": "Paprika extract, Capsanthin, CAPSORUBIN",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E160d",
+      "name": "lycopenes",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E160e",
+      "name": "Beta-apo-8'-carotenal (C30) carotenal (beta-apo-8')",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E160f",
+      "name": "ethyl ester of beta-apo-8'-carotenoid (C30)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E161",
+      "name": "xanthophylls"
+    },
+    {
+      "code": "E161a",
+      "name": "Flavoxanthine (xanthophylls)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E161b",
+      "name": "Lutein (xanthophyll)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E161C",
+      "name": "Cryptoxanthin (xanthophylls)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E161d",
+      "name": "Rubixanthine (xanthophylls)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E161e",
+      "name": "Violaxanthin (xanthophylls)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E161f",
+      "name": "Rhodoxanthin (xanthophylls)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E161g",
+      "name": "Canthaxanthin (xanthophylls)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E161h",
+      "name": "Zeaxanthin (xanthophylls)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E161i",
+      "name": "Citranaxanthin (xanthophylls)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E161j",
+      "name": "Astaxanthin (xanthophylls)"
+    },
+    {
+      "code": "E162",
+      "name": "Red beet BETANIN",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E163",
+      "name": "Anthocyanins Anthocyanins",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E164",
+      "name": "Yellow gardenia, Saffron, Crocin, crocetin"
+    },
+    {
+      "code": "E165",
+      "name": "Blue Gardenia"
+    },
+    {
+      "code": "E166",
+      "name": "Sandalwood",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E170",
+      "name": "Calcium carbonate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E171",
+      "name": "titanium dioxide, titanium dioxide",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E172",
+      "name": "Iron oxides, iron hydroxides",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E173",
+      "name": "Aluminum",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E174",
+      "name": "Silver, Argentum",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E175",
+      "name": "Now, Aurum, Au",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E180",
+      "name": "Lithol Rubine BK, Carmine 6B, Pigment ruby",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E181",
+      "name": "Tannins, tannins, \"tannic acid\"",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E182",
+      "name": "Orseille, Orcein",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E200",
+      "name": "sorbic acid",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E201",
+      "name": "sodium sorbate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E202",
+      "name": "Potassium sorbate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E203",
+      "name": "calcium sorbate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E209",
+      "name": "Heptyl paraben, hydroxybenzoate hepthyle (para-)",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E210",
+      "name": "benzoic acid",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E211",
+      "name": "Sodium benzoate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E212",
+      "name": "potassium benzoate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E213",
+      "name": "calcium benzoate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E214",
+      "name": "Ethyl paraben, ethyl hydroxybenzoate (para-)",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E215",
+      "name": "sodium ethyl paraben, sodium ethyl hydroxybenzoate (para-)",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E216",
+      "name": "Propylparaben, propyl hydroxybenzoate (para-)",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E217",
+      "name": "sodium propyl paraben, sodium propyl hydroxybenzoate (para-)",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E218",
+      "name": "Methylparaben, methyl hydroxybenzoate (para-)",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E219",
+      "name": "sodium methyl paraben, sodium methyl hydroxybenzoate (para-)",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E220",
+      "name": "sulfur dioxide, sulfur dioxide",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E221",
+      "name": "Sodium sulfite",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E222",
+      "name": "sodium bisulfite, sodium hydrogen sulfite",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E223",
+      "name": "sodium metabisulfite, sodium pyrosulphite",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E224",
+      "name": "potassium metabisulfite, potassium pyrosulphite",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E225",
+      "name": "potassium sulfite",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E226",
+      "name": "calcium sulfite",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E227",
+      "name": "calcium sulfite, calcium hydrogen sulphite",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E228",
+      "name": "potassium bisulfite, potassium hydrogen sulfite",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E230",
+      "name": "Diphenyl biphenyl",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E231",
+      "name": "Orthophenylphenol, 2-phenylphenol",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E232",
+      "name": "Orthophenylphenol sodium, sodium orthophenylphenate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E233",
+      "name": "Thiabendazole Benzimidazole",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E234",
+      "name": "nisin",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E235",
+      "name": "Natamycin, Pimaricin",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E236",
+      "name": "formic acid",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E237",
+      "name": "Sodium formate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E238",
+      "name": "Calcium formate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E239",
+      "name": "hexamethylene tetramine",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E240",
+      "name": "Formaldehyde, formic aldehyde, formalin",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E241",
+      "name": "gum guaiac",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E242",
+      "name": "dimethyldicarbonate DMDC",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E249",
+      "name": "Potassium nitrite",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E250",
+      "name": "Sodium nitrite",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E251",
+      "name": "sodium nitrate, Chile saltpetre",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E252",
+      "name": "potassium nitrate, saltpetre",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E260",
+      "name": "acetic acid (glacial), ethanoic acid",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E261",
+      "name": "potassium acetate, potassium ethanoate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E262",
+      "name": "sodium acetate, sodium ethanoate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E263",
+      "name": "calcium acetate, calcium ethanoate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E264",
+      "name": "Ammonium acetate, ammonium ethanoate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E265",
+      "name": "Dehydroacetic acid, dehydroacetic acid",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E266",
+      "name": "sodium dehydroacetate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E270",
+      "name": "lactic acid (L-, D- and DL-)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E280",
+      "name": "propionic acid",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E281",
+      "name": "sodium propionate, sodium propanoate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E282",
+      "name": "calcium propionate, calcium propanoate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E283",
+      "name": "potassium propionate, potassium propanoate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E284",
+      "name": "Boric acid",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E285",
+      "name": "Sodium tetraborate (Borax)",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E290",
+      "name": "Carbon dioxide, Carbon dioxide, Carbon dioxide, CO2",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E296",
+      "name": "Malic acid (L- or DL-)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E297",
+      "name": "fumaric acid",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E300",
+      "name": "ascorbic acid (L), Vitamin C",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E301",
+      "name": "Sodium ascorbate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E302",
+      "name": "Calcium ascorbate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E303",
+      "name": "potassium ascorbate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E304",
+      "name": "Ascorbyl palmitate (i), Ascorbyl stearate (ii)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E306",
+      "name": "Tocopherols, extracts rich in vitamin E",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E307",
+      "name": "Alpha-tocopherol (DL, synthetic)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E308",
+      "name": "Gamma-tocopherol (DL, synthetic)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E309",
+      "name": "Delta-tocopherol (DL, synthetic)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E310",
+      "name": "Propyl gallate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E311",
+      "name": "Octyl gallate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E312",
+      "name": "Dodecyl gallate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E313",
+      "name": "ethyl gallate"
+    },
+    {
+      "code": "E314",
+      "name": "Resin guaiac",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E315",
+      "name": "Erythorbic acid, isoascorbic acid",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E316",
+      "name": "sodium erythorbate, sodium isoascorbate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E317",
+      "name": "potassium erythorbate, potassium isoascorbate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E318",
+      "name": "calcium erythorbate, calcium isoascorbate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E319",
+      "name": "tertiary butylhydroquinone, TBHQ",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E320",
+      "name": "Butylated, hydroxyanisole butylated BHA",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E321",
+      "name": "Butylhydroxytoluene, butylated hydroxytoluene, BHT",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E322",
+      "name": "lecithins",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E323",
+      "name": "Anoxomère",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E324",
+      "name": "Ethoxyquin",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E325",
+      "name": "Sodium lactate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E326",
+      "name": "Potassium lactate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E327",
+      "name": "Lactate Calcium",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E328",
+      "name": "Ammonium lactate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E329",
+      "name": "magnesium lactate (DL-)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E330",
+      "name": "Citric acid",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E331",
+      "name": "Sodium citrate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E332",
+      "name": "Potassium citrate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E333",
+      "name": "Calcium citrate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E334",
+      "name": "tartaric acid, L (+) - tartaric",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E335",
+      "name": "sodium tartrate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E336",
+      "name": "potassium tartrate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E337",
+      "name": "tartrate of sodium and potassium",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E338",
+      "name": "phosphoric acid, orthophosphoric acid",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E339",
+      "name": "sodium phosphates, sodium orthophosphates",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E340",
+      "name": "potassium phosphate, potassium orthophosphates",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E341",
+      "name": "calcium phosphates, calcium orthophosphates",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E342",
+      "name": "Ammonium phosphates, ammonium monophosphate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E343",
+      "name": "magnesium phosphate, magnesium monophosphates",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E344",
+      "name": "Citrate lecithin",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E345",
+      "name": "Magnesium citrate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E349",
+      "name": "Ammonium malate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E350",
+      "name": "sodium malate (DL)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E351",
+      "name": "potassium malate (DL-)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E352",
+      "name": "calcium malate (DL)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E353",
+      "name": "acid metatartaric",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E354",
+      "name": "calcium tartrate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E355",
+      "name": "adipic acid",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E356",
+      "name": "Sodium adipates",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E357",
+      "name": "potassium adipates",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E359",
+      "name": "Ammonium adipates",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E363",
+      "name": "succinic acid",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E364",
+      "name": "sodium succinate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E365",
+      "name": "sodium fumarate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E366",
+      "name": "potassium fumarate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E367",
+      "name": "calcium fumarate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E368",
+      "name": "Fumarates ammonium",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E370",
+      "name": "Heptonolactone (1,4)"
+    },
+    {
+      "code": "E375",
+      "name": "Niacin, nicotinic acid",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E380",
+      "name": "Citrate triammonium",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E381",
+      "name": "ferric ammonium citrate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E383",
+      "name": "Calcium glycerophosphate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E384",
+      "name": "Citrates isopropyl",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E385",
+      "name": "calcium disodium EDTA",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E386",
+      "name": "disodium EDTA",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E387",
+      "name": "oxystearin",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E388",
+      "name": "Thiodipropionic acid, acid thiodipropanoïque, TDPA",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E389",
+      "name": "Dilauryl",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E390",
+      "name": "Thiodipropionate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E391",
+      "name": "phytic acid",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E392",
+      "name": "Rosemary Extract",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E399",
+      "name": "Calcium lactobionate"
+    },
+    {
+      "code": "E400",
+      "name": "alginic acid",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E401",
+      "name": "Sodium alginate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E402",
+      "name": "Potassium alginate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E403",
+      "name": "Ammonium alginate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E404",
+      "name": "Calcium alginate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E405",
+      "name": "propylene glycol alginate, alginate propane-1,2 diol",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E406",
+      "name": "Agar, Layor Carang, Isinglass Japan",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E407",
+      "name": "Carrageenan, carrageenan, furcellaran, Irish moss",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E407a",
+      "name": "Semi-refined carrageenan, eucheuma seaweed",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E408",
+      "name": "yeast glucan",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E409",
+      "name": "arabinogalactan"
+    },
+    {
+      "code": "E410",
+      "name": "locust bean gum, carob bean flour",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E411",
+      "name": "oat gum",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E412",
+      "name": "Guar gum",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E413",
+      "name": "tragacanth, dragon Gum, Tragacanth",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E414",
+      "name": "gum arabic, gum acacia",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E415",
+      "name": "Xanthan gum",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E416",
+      "name": "Karaya Gum, Gum Karaya",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E417",
+      "name": "tara gum",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E418",
+      "name": "gellan gum",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E419",
+      "name": "ghatti"
+    },
+    {
+      "code": "E420",
+      "name": "Sorbitol, sorbitol syrup",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E421",
+      "name": "mannitol",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E422",
+      "name": "Glycerol Glycerin",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E424",
+      "name": "curdlan",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E425",
+      "name": "Konjac Gum, Glucomannan Konjac Flour Konjac",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E426",
+      "name": "soybean hemicellulose",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E427",
+      "name": "cassia gum",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E428",
+      "name": "Gelatin",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E429",
+      "name": "peptones"
+    },
+    {
+      "code": "E430",
+      "name": "polyoxyethylene stearate 8",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E431",
+      "name": "polyoxyethylene 40 stearate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E432",
+      "name": "Polysorbate 20, Tween 20",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E433",
+      "name": "Polysorbate 80, Tween 80",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E434",
+      "name": "Polysorbate 40, Tween 40",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E435",
+      "name": "Polysorbate 60, Tween 60",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E436",
+      "name": "Polysorbate 65, Tween 65",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E440i",
+      "name": "Pectin",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E440ii",
+      "name": "amidated pectin",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E441",
+      "name": "superglycérinée hydrogenated rapeseed oil",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E442",
+      "name": "Ammonium phosphatides",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E443",
+      "name": "brominated vegetable oil",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E444",
+      "name": "Acetate isobutyrate, sucrose, SAIB",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E445",
+      "name": "glycerol ester of wood resins",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E446",
+      "name": "Succistéarine"
+    },
+    {
+      "code": "E450",
+      "name": "Diphosphate, pyrophosphate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E451",
+      "name": "triphosphate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E452",
+      "name": "polyphosphates",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E456",
+      "name": "potassium polyaspartate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E457",
+      "name": "Cyclodextrin (Alpha-) AlphaCD, α-cyclodextrin",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E458",
+      "name": "Cyclodextrin (Gamma-) GammaCD, γ-cyclodextrin",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E459",
+      "name": "Cyclodextrin (beta-) BêtaCD, β-cyclodextrin",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E460",
+      "name": "cellulose",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E461",
+      "name": "methyl cellulose",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E462",
+      "name": "Ethyl cellulose",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E463",
+      "name": "hydroxypropyl cellulose",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E464",
+      "name": "Hydroxypropyl methyl cellulose",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E465",
+      "name": "Methylethyl cellulose, MEC",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E466",
+      "name": "Sodium carboxymethyl cellulose, cellulose gum",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E467",
+      "name": "Ethyl hydroxyethyl cellulose",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E468",
+      "name": "Crosslinked carboxymethyl cellulose sodium, crosslinked cellulose gum",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E469",
+      "name": "Sodium carboxymethyl cellulose hydrolyzed enzymatically, ...",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E470",
+      "name": "Salts of fatty acids (having for base Al, NH4, Ca, Mg, K, Na)",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E470a",
+      "name": "sodium, potassium and calcium fatty acid",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E470b",
+      "name": "magnesium salts of fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E471",
+      "name": "Mono and diglycerides of fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E472a",
+      "name": "Acetic acid esters of mono- and diglycerides of fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E472b",
+      "name": "Lactic acid esters of mono- and diglycerides of fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E472c",
+      "name": "Citric acid esters of mono- and diglycerides of fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E472d",
+      "name": "Tartaric acid esters of mono- and diglycerides of fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E472e",
+      "name": "Esters of mono- and diacetyl tartaric acid mono- and diglycerides of fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E472f",
+      "name": "acétiq mixed esters. and tartriq. of mono- and diglycerides of fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E472g",
+      "name": "succinyl monoglycerides",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E473",
+      "name": "Sucrose esters of fatty acids, fatty acid sucrose esters",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E473a",
+      "name": "Sucrose oligoesters type I and type II",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E474",
+      "name": "Sucroglycerides, Sucroglycerides",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E475",
+      "name": "Polyglycerol esters of fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E476",
+      "name": "Polyglycerol polyricinoleate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E477",
+      "name": "propylene glycol esters of fatty acids",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E478",
+      "name": "Glycerol esters and propylene glycol of lactylated fatty acids",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E479b",
+      "name": "Soybean oil oxidized by heating",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E480",
+      "name": "Dioctyl sulfosuccinate sodium, sodium docusate, DSS",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E481",
+      "name": "sodium lactylate, sodium stearoyl-2-lactylate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E482",
+      "name": "Calcium lactylates, stearoyl-2-lactylate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E483",
+      "name": "Stearyl tartrate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E484",
+      "name": "Stearyl citrate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E485",
+      "name": "sodium stearoyl fumarate"
+    },
+    {
+      "code": "E486",
+      "name": "calcium stearoyl fumarate"
+    },
+    {
+      "code": "E487",
+      "name": "sodium lauryl sulfate, LSS",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E488",
+      "name": "Mono and diglycerides ethoxylates",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E489",
+      "name": "coconut oil methyl glycoside ester"
+    },
+    {
+      "code": "E491",
+      "name": "Sorbitan monostearate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E492",
+      "name": "Sorbitan tristearate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E493",
+      "name": "Sorbitan monolaurate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E494",
+      "name": "Monooleate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E495",
+      "name": "Monopalmitate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E496",
+      "name": "Sorbitan trioleate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E500",
+      "name": "Sodium carbonates",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E501",
+      "name": "potassium carbonate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E502",
+      "name": "carbonates"
+    },
+    {
+      "code": "E503",
+      "name": "Ammonium carbonate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E504",
+      "name": "magnesium carbonate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E505",
+      "name": "iron carbonate, ferrous carbonate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E507",
+      "name": "Hydrochloric acid",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E508",
+      "name": "Potassium chloride",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E509",
+      "name": "Calcium chloride",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E510",
+      "name": "Ammonium chloride",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E511",
+      "name": "Magnesium chloride",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E512",
+      "name": "tin chloride, stannous chloride",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E513",
+      "name": "Sulfuric acid",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E514",
+      "name": "Sodium sulfate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E515",
+      "name": "potassium sulfate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E516",
+      "name": "Calcium sulphate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E517",
+      "name": "Ammonium sulfate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E518",
+      "name": "Magnesium sulfate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E519",
+      "name": "Copper sulfate II, cupric sulfate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E520",
+      "name": "aluminum sulphate (anhydrous)",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E521",
+      "name": "Sodium aluminum sulfate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E522",
+      "name": "Potassium aluminum sulfate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E523",
+      "name": "aluminum ammonium sulfate, ammonium aluminum sulfate",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E524",
+      "name": "Sodium hydroxide",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E525",
+      "name": "potassium hydroxide",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E526",
+      "name": "Calcium hydroxide",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E527",
+      "name": "ammonium hydroxide, Aqua ammonia, ammonia solution",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E528",
+      "name": "magnesium hydroxide, magnesia milk",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E529",
+      "name": "calcium oxide, lime, quicklime",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E530",
+      "name": "magnesium oxide",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E535",
+      "name": "Sodium ferrocyanide",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E536",
+      "name": "Potassium ferrocyanide",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E537",
+      "name": "Iron hexacyanomanganate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E538",
+      "name": "Calcium ferrocyanide",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E539",
+      "name": "Sodium thiosulfate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E540",
+      "name": "calcium hydrogen phosphate, calcium hydrogen phosphate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E541",
+      "name": "sodium aluminum phosphate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E542",
+      "name": "bone phosphate, edible bone phosphate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E544",
+      "name": "calcium polyphosphates",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E545",
+      "name": "Ammonium polyphosphates",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E546",
+      "name": "magnesium diphosphate, magnesium pyrophosphate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E550",
+      "name": "Sodium Silicate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E551",
+      "name": "silicon dioxide (amorphous), silica (amorphous)",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E552",
+      "name": "Calcium silicate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E553",
+      "name": "magnesium silicate, magnesium trisilicate, talc",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E554",
+      "name": "Sodium aluminum silicate, sodium silicoaluminate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E555",
+      "name": "potassium aluminum silicate, potassium Silocoaluminate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E556",
+      "name": "calcium alumino-silicate, calcium silicoaluminate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E557",
+      "name": "zinc silicate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E558",
+      "name": "bentonite",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E559",
+      "name": "Aluminum silicate (kaolin light or heavy)",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E560",
+      "name": "potassium silicate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E570",
+      "name": "Fatty acids",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E572",
+      "name": "Magnesium Stearate, Magnesium stearate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E574",
+      "name": "Gluconic acid (D-)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E575",
+      "name": "Glucono-delta-lactone",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E576",
+      "name": "Sodium Gluconate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E577",
+      "name": "potassium gluconate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E578",
+      "name": "Calcium gluconate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E579",
+      "name": "ferrous gluconate, ferrous gluconate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E580",
+      "name": "magnesium gluconate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E585",
+      "name": "Lactate iron, ferrous lactate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E586",
+      "name": "Hexylresorcinol (4)",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E620",
+      "name": "glutamic acid",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E621",
+      "name": "MSG, monosodium glutamate, MSG",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E622",
+      "name": "potassium glutamate, monopotassium glutamate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E623",
+      "name": "calcium glutamate, monocalcium diglutamate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E624",
+      "name": "Monoammonium glutamate, glutamate monoammonium",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E625",
+      "name": "magnesium glutamate, diglutamate Monomagnesium",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E626",
+      "name": "Acid guanine, guanosine 5'-monophosphate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E627",
+      "name": "disodium guanylate, guanylate-5 sodium",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E628",
+      "name": "potassium guanylate, potassium 5'- guanylate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E629",
+      "name": "calcium guanylate, calcium guanylate 5'-",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E630",
+      "name": "inosinic acid, inosine 5'-monophosphate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E631",
+      "name": "disodium inosinate, sodium inosinate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E632",
+      "name": "Dipotassium inosinate, potassium inosinate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E633",
+      "name": "calcium inosinate, calcium inosinate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E634",
+      "name": "Calcium 5'-ribonucleotide, calcium ribonucleotide",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E635",
+      "name": "Disodium 5'-ribonucleotide sodium ribonucleotide",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E636",
+      "name": "maltol",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E637",
+      "name": "Maltol, ethyl maltol, maltol Ethyl",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E638",
+      "name": "sodium aspartate (L-)"
+    },
+    {
+      "code": "E639",
+      "name": "Alanine (DL)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E640",
+      "name": "Glycine and its sodium salt",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E641",
+      "name": "Leucine (L)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E642",
+      "name": "Lysine hydrochloride",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E650",
+      "name": "Zinc acetate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E900",
+      "name": "Dimethyl polysiloxane, polydimethylsiloxane, Dimethicone, PDMS",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E900b",
+      "name": "Methylphenyl, polyphenylmethylsiloxane, Phenyl trimethicone",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E901",
+      "name": "beeswax, white wax, yellow wax",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E902",
+      "name": "Candelilla wax",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E903",
+      "name": "Carnauba wax",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E904",
+      "name": "Shellac resin, shellac, bleached shellac",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E905",
+      "name": "microcrystalline wax, petroleum wax, synthetic paraffin",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E905a",
+      "name": "mineral food grade oil",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E905b",
+      "name": "Vaseline, petroleum jelly, Petrolatum",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E905c",
+      "name": "microcrystalline wax, petroleum wax, paraffin wax",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E905d",
+      "name": "mineral oil (high viscosity)",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E905e",
+      "name": "mineral oil (medium and low viscosity, Class I)",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E905f",
+      "name": "mineral oil (medium and low viscosity, class II)",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E905g",
+      "name": "mineral oil (medium and low viscosity, category III)",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E906",
+      "name": "Gum benzoin, benzoin resin, benzoic gum",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E907",
+      "name": "hydrogenated poly-1-decene, hydrogenated polydecene",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E908",
+      "name": "rice bran wax"
+    },
+    {
+      "code": "E909",
+      "name": "spermaceti wax"
+    },
+    {
+      "code": "E910",
+      "name": "Esters waxes"
+    },
+    {
+      "code": "E911",
+      "name": "Methyl esters of fatty acids, FAME"
+    },
+    {
+      "code": "E912",
+      "name": "Esters of montanic acid",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E913",
+      "name": "Lanolin",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E914",
+      "name": "oxidized polyethylene wax",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E915",
+      "name": "Rosin esters",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E916",
+      "name": "calcium iodate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E917",
+      "name": "Potassium iodate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E918",
+      "name": "Nitrogen oxides",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E919",
+      "name": "Nitrosyl chloride",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E920",
+      "name": "Cysteine ​​(L) and its hydrochloride salts (sodium and potassium salts)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E921",
+      "name": "Cystine (L-) and its hydrochloride salts (sodium and potassium salts)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E922",
+      "name": "potassium persulfate",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E923",
+      "name": "Ammonium persulfate",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E924a",
+      "name": "potassium bromate",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E924b",
+      "name": "calcium bromate",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E925",
+      "name": "Chlorine, Chlorine",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E926",
+      "name": "chlorine peroxide, chlorine dioxide, chlorine monoxide",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E927a",
+      "name": "Azodicarbonamide, Azoformamide",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E927b",
+      "name": "Urea, Urea",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E928",
+      "name": "benzoyl peroxide",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E929",
+      "name": "acetone peroxide",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E930",
+      "name": "calcium peroxide",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E938",
+      "name": "Argon",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E939",
+      "name": "Helium",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E940",
+      "name": "dichlorodifluoromethane",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E941",
+      "name": "Nitrogen",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E942",
+      "name": "Nitrous oxide, nitrous oxide",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E943a",
+      "name": "Butane",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E943b",
+      "name": "isobutane",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E944",
+      "name": "Propane",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E945",
+      "name": "chloropentafluoroethane"
+    },
+    {
+      "code": "E946",
+      "name": "octafluorocyclobutane"
+    },
+    {
+      "code": "E948",
+      "name": "Oxygen",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E949",
+      "name": "Hydrogen",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E950",
+      "name": "Acesulfame potassium, acesulfame-K",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E951",
+      "name": "aspartame",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E952",
+      "name": "cyclamates",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E953",
+      "name": "Isomalt (hydrogenated isomaltulose)",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E954",
+      "name": "Saccharin and its Na, Ca and K",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E955",
+      "name": "Sucralose (trichlorogalactosucrose)",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E956",
+      "name": "alitame",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E957",
+      "name": "thaumatin",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E958",
+      "name": "Glycyrrhizin, glycyrrhizic acid, Liquorice, Licorice",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E959",
+      "name": "Neohesperidin dihydrochalcone, Neohesperidine DC, NHDC",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E960",
+      "name": "Steviol glycosides",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E961",
+      "name": "neotame",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E962",
+      "name": "Aspartame acesulfame salt (salt)",
+      "impact": "very toxic"
+    },
+    {
+      "code": "E963",
+      "name": "Tagatose (D-)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E964",
+      "name": "Polyglycitol syrup",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E965",
+      "name": "Maltitol, Maltitol syrup",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E966",
+      "name": "lactitol",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E967",
+      "name": "xylitol",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E968",
+      "name": "erythritol",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E999",
+      "name": "Quillaia extracts (type I and II)",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1000",
+      "name": "cholic acid",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E1001",
+      "name": "Choline (de- salts and esters)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E1100",
+      "name": "amylase",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E1101",
+      "name": "Protease (Protease, Papain, Bromelain, Ficin)",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E1102",
+      "name": "glucose oxidase",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E1103",
+      "name": "invertase",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E1104",
+      "name": "lipases",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E1105",
+      "name": "Lysozyme, lysozyme hydrochloride",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1200",
+      "name": "Polydextrose A and N, modified polydextrose",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1201",
+      "name": "Polyvinylpyrrolidone, PVP",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E1202",
+      "name": "Polyvinylpolypyrrolidone, PVPP",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E1203",
+      "name": "polyvinyl alcohol",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E1204",
+      "name": "Pullulan, pullulan",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E1205",
+      "name": "Basic methacrylate copolymer"
+    },
+    {
+      "code": "E1400",
+      "name": "roasted starch, Dextrins, said starch",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1401",
+      "name": "Starch treated with acids, said modified starch",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1402",
+      "name": "Treated starch Alkali, said modified starch",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1403",
+      "name": "bleached starch, said starch modified",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E1404",
+      "name": "Oxidized starch, said modified starch",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "e1405",
+      "name": "Treated starch enzymes, said starch",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1410",
+      "name": "Phosphate starch, said modified starch",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E1411",
+      "name": "Distarch glycerol, glycerin DISTARCH says Modified starch",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1412",
+      "name": "Distarch phosphate, said modified starch",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E1413",
+      "name": "Phosphated distarch phosphate, said modified starch",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E1414",
+      "name": "Distarch phosphate acetylated says Modified starch",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E1420",
+      "name": "Acetylated starch, acetate starch, said modified starch",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E1421",
+      "name": "Acetylated starch with vinyl acetate, said modified starch",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E1422",
+      "name": "Acetylated distarch adipate, said modified starch",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1440",
+      "name": "Hydroxypropyl starch, said starch modified",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E1441",
+      "name": "Glycerin hydroxypropyl distarch says Modified starch",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E1442",
+      "name": "Hydroxypropyl distarch phosphate, said modified starch",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E1450",
+      "name": "Octenyl succinate sodium starch, said modified starch",
+      "impact": "doubtful"
+    },
+    {
+      "code": "E1451",
+      "name": "Acetylated oxidized starch, said modified starch",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1452",
+      "name": "Octenyl succinate of alumina starch, said modified starch",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E1503",
+      "name": "Castor oil",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1505",
+      "name": "triethyl citrate, triethyl citrate, Triethyl citrate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1510",
+      "name": "Ethanol, Ethyl alcohol",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1517",
+      "name": "Diacetin, glyceryl diacetate, glyceryl diacetate",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1518",
+      "name": "Triacetin, glycerol triacetate, glyceryl triacetate",
+      "impact": "No / low toxicity"
+    },
+    {
+      "code": "E1519",
+      "name": "benzyl alcohol, benzyl alcohol, Phenylmethanol",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1520",
+      "name": "Propylene glycol, propane 1,2-diol",
+      "impact": "Do not abuse"
+    },
+    {
+      "code": "E1521",
+      "name": "Polyethylene glycol, Macrogol, PEG",
+      "impact": "Toxic"
+    },
+    {
+      "code": "E1522",
+      "name": "Calcium lignosulfonate (40-65)",
+      "impact": "doubtful"
+    }
+  ]
+}

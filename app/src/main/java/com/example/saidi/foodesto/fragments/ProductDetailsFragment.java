@@ -180,6 +180,12 @@ public class ProductDetailsFragment extends BaseFragment {
                                 ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
                                 productPropertieView.bind(NutrimentType.ADDITIVE, additivesN, "", SeverityType.BAD);
                                 mProductAdditivesContainer.addView(productPropertieView);
+                                productPropertieView.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        getMainActivity().pushFragment(AdditivesFragment.newInstance(mDbProduct.getAdditivesTags()));
+                                    }
+                                });
                             } else {
                                 mProductAdditivesContainer.setVisibility(View.GONE);
                             }
@@ -258,6 +264,12 @@ public class ProductDetailsFragment extends BaseFragment {
                         ProductPropertieView productPropertieView = new ProductPropertieView(mContext);
                         productPropertieView.bind(NutrimentType.ADDITIVE, additivesN, "", SeverityType.BAD);
                         mProductAdditivesContainer.addView(productPropertieView);
+                        productPropertieView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                getMainActivity().pushFragment(AdditivesFragment.newInstance((ArrayList<String>) mProduct.getAdditivesTags()));
+                            }
+                        });
                     } else {
                         mProductAdditivesContainer.setVisibility(View.GONE);
                     }
@@ -315,7 +327,7 @@ public class ProductDetailsFragment extends BaseFragment {
             public void databaseCallback(@Nullable Long result) {
                 final DBProduct dbProduct = new DBProduct();
                 dbProduct.setId(Long.parseLong(mProduct.getCode()));
-                dbProduct.setAdditives(mProduct.getAdditives());
+                dbProduct.setAdditivesTags((ArrayList<String>) mProduct.getAdditivesTags());
                 dbProduct.setAdditivesN(mProduct.getAdditivesN());
                 dbProduct.setNutrimentID(result);
                 dbProduct.setBrands(mProduct.getBrands());
