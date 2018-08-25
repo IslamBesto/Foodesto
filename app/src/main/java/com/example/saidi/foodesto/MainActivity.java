@@ -1,20 +1,16 @@
 package com.example.saidi.foodesto;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.saidi.foodesto.activities.BarCodeActivity;
+import com.example.saidi.foodesto.barcode.BarcodeCaptureActivity;
 import com.example.saidi.foodesto.common.activities.BaseActivity;
 import com.example.saidi.foodesto.fragments.HomePurchacesFragment;
 import com.example.saidi.foodesto.fragments.HomeStatisticsFragment;
@@ -23,6 +19,8 @@ import com.example.saidi.foodesto.interfaces.IHomeFragment;
 import com.example.saidi.foodesto.models.Product;
 import com.example.saidi.foodesto.views.BottomNavigationWithFabView;
 import com.example.saidi.foodesto.views.CurvedBottomNavigationView;
+import com.google.android.gms.common.api.CommonStatusCodes;
+import com.google.android.gms.vision.barcode.Barcode;
 
 import java.util.List;
 
@@ -34,12 +32,9 @@ public class MainActivity extends BaseActivity implements IHomeFragment {
     public static final String KEY_PRODUCT = "product";
     private static final String TAG = MainActivity.class.getName();
     private static final int DEFAULT_HOME_ITEM = R.id.home_statistics_nav_menu_item;
+    private static final int RC_BARCODE_CAPTURE = 9001;
     @BindView(R.id.bottom_navigation_bar_fab)
     protected BottomNavigationWithFabView mBottomNavigationViewWithFab;
-    // Permission List
-    private String[] REQUEST_PERMISSIONS = new String[]{android.Manifest.permission.CAMERA};
-    // Permission Request Code
-    private int RESULT_PERMISSIONS = 0x9000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +58,6 @@ public class MainActivity extends BaseActivity implements IHomeFragment {
     }
 
     private boolean selectFragment(@NonNull MenuItem item, CurvedBottomNavigationView curvedBottomNavigationView) {
-//        if (curvedBottomNavigationView.getSelectedItemId() == item.getItemId()) {
-//            return false;
-//        }
         clearBackStack();
         switch (item.getItemId()) {
             case R.id.home_statistics_nav_menu_item:
@@ -73,7 +65,8 @@ public class MainActivity extends BaseActivity implements IHomeFragment {
                 pushFragment(HomeStatisticsFragment.newInstance());
                 return true;
             case R.id.home_scan_nav_menu_item:
-                if (isPermissionGranted()) startBarCodeActivity();
+                // launch barcode activity.
+                startBarCodeActivity();
                 return true;
             case R.id.home_purchace_nav_menu_item:
                 pushFragment(HomePurchacesFragment.newInstance());
@@ -82,28 +75,12 @@ public class MainActivity extends BaseActivity implements IHomeFragment {
         return false;
     }
 
-    /**
-     * Request permission and check
-     */
-    private boolean isPermissionGranted() {
-        int sdkVersion = Build.VERSION.SDK_INT;
-        if (sdkVersion >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(MainActivity.this, REQUEST_PERMISSIONS, RESULT_PERMISSIONS);
-                return false;
-            } else {
-                return true;
-            }
-        } else {
-            return true;
-        }
-    }
-
-    /**
-     * Go to camera preview
-     */
     private void startBarCodeActivity() {
-        startActivityForResult(new Intent(this, BarCodeActivity.class), 100);
+        Intent intent = new Intent(this, BarcodeCaptureActivity.class);
+        intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
+        intent.putExtra(BarcodeCaptureActivity.UseFlash, false);
+
+        startActivityForResult(intent, RC_BARCODE_CAPTURE);
     }
 
     @Override
@@ -155,26 +132,22 @@ public class MainActivity extends BaseActivity implements IHomeFragment {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            pushFragment(ProductDetailsFragment.newInstance((Product) data.getSerializableExtra(KEY_PRODUCT)));
-            mBottomNavigationViewWithFab.getCurvedBottomNavigationView().getMenu().findItem(R.id.home_purchace_nav_menu_item).setChecked(true);
-        }
-    }
+        if (requestCode == RC_BARCODE_CAPTURE) {
+            if (resultCode == CommonStatusCodes.SUCCESS) {
+                if (data != null) {
+                    Barcode barcode = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
+                    pushFragment(ProductDetailsFragment.newInstance((Product) data.getSerializableExtra(KEY_PRODUCT)));
+                    mBottomNavigationViewWithFab.getCurvedBottomNavigationView().getMenu().findItem(R.id.home_purchace_nav_menu_item).setChecked(true);
 
-    /**
-     * Post-process for granted permissions
-     */
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
-        if (RESULT_PERMISSIONS == requestCode) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // Permission granted
-                startBarCodeActivity();
+                } else {
+                    Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "No barcode captured, intent data is null");
+                }
             } else {
-                // Rejected
-                Toast.makeText(this, "Error permission", Toast.LENGTH_SHORT).show();
+
             }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 
